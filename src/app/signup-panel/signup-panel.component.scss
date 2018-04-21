@@ -1,0 +1,42 @@
+mat-card{
+  width: 408px;
+  margin: 0 auto;
+  display: block;
+  background: white;
+  mat-card-header {
+    display: block;
+  }
+  mat-card-title, mat-card-subtitle {
+    user-select: none;
+    color: #0084ff;
+  }
+  mat-card-title {
+    font-size: 72px;
+    font-weight: bold;
+  }
+  mat-card-subtitle{
+    font-size: 22px;
+  }
+  mat-card-content{
+    text-align: left;
+  }
+
+  div.signup-content, mat-card-actions{
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  mat-card-actions{
+    display: block;
+    text-align: left;
+    margin-bottom: 16px!important;
+    button.signup {
+      width: 100%;
+    }
+
+    p.contract {
+      font-size: 14px;
+      color: #8590a6;
+    }
+  }
+}

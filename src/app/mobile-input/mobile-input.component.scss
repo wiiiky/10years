@@ -1,0 +1,18 @@
+
+:host {
+  display: flex;
+  font-size: 16px;
+  mat-form-field{
+    flex: 1;
+  }
+  div.divider {
+    width: 0.6px;
+    height: auto;
+    background-color: grey;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}

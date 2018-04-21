@@ -1,0 +1,15 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>十年</mat-card-title>
+    <mat-card-subtitle>注册十年，发现更大的世界</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="signup-content">
+      <app-mobile-input (onValueChanged)="onMobileChanged($event)"></app-mobile-input>
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <button class="signup" mat-raised-button color="primary" (click)="onSignup()">注册</button>
+    <p class="contract">注册即代表同意《十年协议》《隐私政策》</p>
+  </mat-card-actions>
+</mat-card>
