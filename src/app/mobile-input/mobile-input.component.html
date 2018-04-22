@@ -1,8 +1,8 @@
 <app-country-code-select (onSelectValue)='onCountryCodeChanged($event)'></app-country-code-select>
 <div class="divider"></div>
 <mat-form-field class="mobile-input">
-  <input matInput type="tel" placeholder="手机号" [(ngModel)]="info.number" (ngModelChange)="onNumberChanged($event)" [formControl]="emailFormControl">
-  <mat-error *ngIf="emailFormControl.hasError('required')">
+  <input matInput type="tel" placeholder="手机号" [(ngModel)]="info.number" (ngModelChange)="onNumberChanged($event)" [formControl]="formControl">
+  <mat-error *ngIf="formControl.hasError('required')">
     请输入手机号
   </mat-error>
 </mat-form-field>

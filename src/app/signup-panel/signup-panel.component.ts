@@ -9,6 +9,7 @@ export class SignupPanelComponent implements OnInit {
 
   countryCode: string;
   number: string;
+  code: string;
 
   constructor() { }
 
@@ -20,7 +21,11 @@ export class SignupPanelComponent implements OnInit {
     this.number = v.number;
   }
 
+  onCodeChanged(v) {
+    this.code = v;
+  }
+
   onSignup() {
-    console.debug(this.countryCode, this.number);
+    console.debug(this.countryCode, this.number, this.code);
   }
 }

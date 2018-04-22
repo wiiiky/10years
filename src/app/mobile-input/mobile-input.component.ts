@@ -14,7 +14,7 @@ export class MobileInputComponent implements OnInit {
 
   @Output() onValueChanged = new EventEmitter<{countryCode:string,number:string}>();
 
-  emailFormControl = new FormControl('', [
+  formControl = new FormControl('', [
     Validators.required,
   ]);
 

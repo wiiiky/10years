@@ -44,6 +44,7 @@ import { CountryCodeSelectComponent } from './country-code-select/country-code-s
 import { CountryCodeService } from './country-code-select/country-code.service';
 import { MobileInputComponent } from './mobile-input/mobile-input.component';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { CodeInputComponent } from './code-input/code-input.component';
 
 
 @NgModule({
@@ -52,7 +53,8 @@ import { FormsModule, ReactiveFormsModule} from '@angular/forms';
     LoginPageComponent,
     SignupPanelComponent,
     CountryCodeSelectComponent,
-    MobileInputComponent
+    MobileInputComponent,
+    CodeInputComponent
   ],
   imports: [
     FormsModule,

@@ -1,0 +1,13 @@
+:host{
+  width: 100%;
+  display: block;
+  mat-form-field {
+    width: 100%;
+  }
+
+  a.send-code {
+    cursor: pointer;
+    user-select: none;
+    color: #2b60a2;
+  }
+}
