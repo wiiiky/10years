@@ -1,4 +1,8 @@
 <div class="login-page">
+<div class="container">
   <app-signup-panel *ngIf="router.url === '/signup'"></app-signup-panel>
   <app-login-panel *ngIf="router.url === '/login'"></app-login-panel>
+
+  <button mat-raised-button class="download">下载十年 App</button>
+</div>
 </div>

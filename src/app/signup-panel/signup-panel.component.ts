@@ -28,6 +28,5 @@ export class SignupPanelComponent implements OnInit {
 
   onSignup() {
     console.debug(this.countryCode, this.number, this.code);
-    this.router.navigate(['/login']);
   }
 }

@@ -1,8 +1,11 @@
 mat-card{
-  width: 408px;
+  width: 432px;
   margin: 0 auto;
   display: block;
   background: white;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0px;
   mat-card-header {
     display: block;
     text-align: center;
@@ -27,8 +30,8 @@ mat-card{
   }
 
   div.login-content, mat-card-actions{
-    margin-left: 16px;
-    margin-right: 16px;
+    margin-left: 40px;
+    margin-right: 40px;
   }
 
   mat-card-actions{
@@ -42,6 +45,21 @@ mat-card{
       font-size: 14px;
       color: #8590a6;
       text-align: center;
+    }
+  }
+
+  div.bottom {
+    width: 100%;
+    height: 59px;
+    background-color: #f6f6f6;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+    a{
+      color: #175199;
+      text-decoration: none;
     }
   }
 }

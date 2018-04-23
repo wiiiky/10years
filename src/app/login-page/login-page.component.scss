@@ -1,4 +1,4 @@
-div.login-page{
+div.login-page {
   background-repeat: no-repeat;
   background-color: #b8e5f8;
   background-size: cover;
@@ -7,12 +7,22 @@ div.login-page{
   overflow: auto;
   background-image: url("../../assets/image/sign_bg.png");
 
-  app-signup-panel, app-login-panel {
+  div.container {
     display: flex;
     flex: 1;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100%;
+
+    button.download {
+      background: #8590a6;
+      width: 432px;
+      height: 42px;
+      padding: 0px;
+      margin-top: 30px;
+      color: white;
+    }
   }
+
 }
