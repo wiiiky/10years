@@ -7,7 +7,7 @@ div.login-page{
   overflow: auto;
   background-image: url("../../assets/image/sign_bg.png");
 
-  app-signup-panel {
+  app-signup-panel, app-login-panel {
     display: flex;
     flex: 1;
     flex-direction: column;

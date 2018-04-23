@@ -1,3 +1,4 @@
 <div class="login-page">
-  <app-signup-panel></app-signup-panel>
+  <app-signup-panel *ngIf="router.url === '/signup'"></app-signup-panel>
+  <app-login-panel *ngIf="router.url === '/login'"></app-login-panel>
 </div>

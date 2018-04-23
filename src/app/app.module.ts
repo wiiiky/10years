@@ -40,11 +40,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { SignupPanelComponent } from './signup-panel/signup-panel.component';
+import { LoginPanelComponent } from './login-panel/login-panel.component';
 import { CountryCodeSelectComponent } from './country-code-select/country-code-select.component';
 import { CountryCodeService } from './country-code-select/country-code.service';
 import { MobileInputComponent } from './mobile-input/mobile-input.component';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { CodeInputComponent } from './code-input/code-input.component';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
@@ -52,6 +54,7 @@ import { CodeInputComponent } from './code-input/code-input.component';
     AppComponent,
     LoginPageComponent,
     SignupPanelComponent,
+    LoginPanelComponent,
     CountryCodeSelectComponent,
     MobileInputComponent,
     CodeInputComponent
@@ -94,6 +97,7 @@ import { CodeInputComponent } from './code-input/code-input.component';
     MatTooltipModule,
     MatFormFieldModule,
     BrowserAnimationsModule,
+    AppRoutingModule,
   ],
   providers: [
     CountryCodeService,

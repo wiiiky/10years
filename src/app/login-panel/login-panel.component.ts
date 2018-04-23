@@ -2,17 +2,17 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-signup-panel',
-  templateUrl: './signup-panel.component.html',
-  styleUrls: ['./signup-panel.component.scss']
+  selector: 'app-login-panel',
+  templateUrl: './login-panel.component.html',
+  styleUrls: ['./login-panel.component.scss']
 })
-export class SignupPanelComponent implements OnInit {
+export class LoginPanelComponent implements OnInit {
 
   countryCode: string;
   number: string;
   code: string;
 
-  constructor(private router: Router) { }
+  constructor(private router :Router) { }
 
   ngOnInit() {
   }
@@ -26,8 +26,8 @@ export class SignupPanelComponent implements OnInit {
     this.code = v;
   }
 
-  onSignup() {
+  onLogin() {
     console.debug(this.countryCode, this.number, this.code);
-    this.router.navigate(['/login']);
+    this.router.navigate(['/signup']);
   }
 }
