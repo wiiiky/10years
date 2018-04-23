@@ -10,7 +10,7 @@ export class LoginPanelComponent implements OnInit {
 
   countryCode: string;
   number: string;
-  code: string;
+  password: string;
 
   constructor(private router :Router) { }
 
@@ -22,12 +22,12 @@ export class LoginPanelComponent implements OnInit {
     this.number = v.number;
   }
 
-  onCodeChanged(v) {
-    this.code = v;
+  onPasswordChanged(v) {
+    this.password = v;
   }
 
   onLogin() {
-    console.debug(this.countryCode, this.number, this.code);
+    console.debug(this.countryCode, this.number, this.password);
     this.router.navigate(['/signup']);
   }
 }

@@ -20,6 +20,10 @@ mat-card{
   }
   mat-card-content{
     text-align: left;
+
+    mat-form-field.password-input {
+      width: 100%;
+    }
   }
 
   div.login-content, mat-card-actions{
