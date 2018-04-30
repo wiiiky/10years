@@ -47,6 +47,8 @@ import { MobileInputComponent } from './mobile-input/mobile-input.component';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { CodeInputComponent } from './code-input/code-input.component';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+import { HomePageComponent } from './home-page/home-page.component';
 
 
 @NgModule({
@@ -57,7 +59,8 @@ import { AppRoutingModule } from './app-routing.module';
     LoginPanelComponent,
     CountryCodeSelectComponent,
     MobileInputComponent,
-    CodeInputComponent
+    CodeInputComponent,
+    HomePageComponent
   ],
   imports: [
     FormsModule,
@@ -98,6 +101,7 @@ import { AppRoutingModule } from './app-routing.module';
     MatFormFieldModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [
     CountryCodeService,

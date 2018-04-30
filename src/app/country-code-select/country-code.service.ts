@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { of } from 'rxjs/observable/of';
-
+import { HttpClient } from '@angular/common/http';
+import { APIConfig } from '../app.config'
+import 'rxjs/add/operator/map'
 
 export class CountryCode {
   value: string;
@@ -11,17 +13,20 @@ export class CountryCode {
 @Injectable()
 export class CountryCodeService {
 
-  constructor() { }
-
-
-  supportedCountryCodes: CountryCode[] = [
-    { value: '86', viewValue: '中国 +86'},
-    { value: '1', viewValue: '美国 +1'},
-    { value: '81', viewValue: '日本 +81'},
-  ];
+  constructor(private http: HttpClient) { }
 
   getSupportedCountryCodes(): Observable<CountryCode[]> {
-    return of(this.supportedCountryCodes);
+    var url :string = APIConfig.HOST + APIConfig.PATH_SUPPORTED_COUNTRIES;
+    return this.http.get(url).map(this.extractData);
+  }
+
+  private extractData(data) {
+    let results = [];
+    for (let v of data) {
+        results.push({value:v.code,viewValue:v.name+' +' + v.code});
+    }
+    console.debug(results);
+    return results;
   }
 
 }
