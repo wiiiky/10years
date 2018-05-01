@@ -24,7 +24,7 @@ mat-card{
   mat-card-content{
     text-align: left;
 
-    mat-form-field.password-input {
+    mat-form-field.password-input, mat-form-field.number-input {
       width: 100%;
     }
   }

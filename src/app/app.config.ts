@@ -5,4 +5,5 @@ export class APIConfig {
   static PATH_SUPPORTED_COUNTRIES = "/supported_countries";
   static PATH_USER_INFO = "/account/info";
   static PATH_SIGNUP = "/account";
+  static PATH_LOGIN = "/login";
 }
