@@ -11,6 +11,7 @@ import { APIConfig } from '../app.config'
 export class HomePageComponent implements OnInit {
 
   private loggedin :boolean = false;
+  private searchFocused :string = '';
 
   constructor(private http: HttpClient,private router: Router) { }
 
@@ -20,4 +21,11 @@ export class HomePageComponent implements OnInit {
       err=>this.router.navigate(['/login']));
   }
 
+  onSearchBlur(){
+    this.searchFocused = '';
+  }
+
+  onSearchFocus(){
+    this.searchFocused = 'focused';
+  }
 }

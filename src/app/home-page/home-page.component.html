@@ -1,3 +1,13 @@
-<p *ngIf="loggedin===true">
-  home-page works!
-</p>
+<div *ngIf="loggedin===true">
+  <div class="toolbar">
+    <div class="toolbar-content">
+      <a class="toolbar-title" [routerLink]="['/']">十年</a>
+      <a class="home-link" [routerLink]="['/']">首页</a>
+      <a class="discover-link" [routerLink]="['/']">发现</a>
+      <a class="topic-link" [routerLink]="['/']">话题</a>
+      <div class="input-wrapper {{searchFocused}}">
+        <input class="search" (blur)="onSearchBlur()" (focus)="onSearchFocus()" placeholder="输入您想搜索的内容">
+        <mat-icon class="search-icon">search</mat-icon>
+      </div>
+  </div>
+</div>
