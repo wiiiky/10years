@@ -1,0 +1,29 @@
+:host{
+    mat-card{
+        height: 58px;
+        padding: 0px 20px;
+
+        svg:not(:first-child){
+            margin-left: 40px;
+        }
+
+        >a{
+            height: 58px;
+            line-height: 58px;
+            text-decoration: none;
+            font-size: 16px;
+            color: #1a1a1a;
+            transition: color .2s ease-in-out;
+            user-select: none;
+            &:hover{
+                color: #175199;
+            }
+        }
+
+        >a.draft-link {
+            color: #8590a6;
+            font-size: 15px;
+            float: right;
+        }
+    }
+}

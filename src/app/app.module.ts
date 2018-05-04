@@ -49,6 +49,8 @@ import { CodeInputComponent } from './code-input/code-input.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { HomePageComponent } from './home-page/home-page.component';
+import { HomeToolbarComponent } from './home-toolbar/home-toolbar.component';
+import { QaMenuComponent } from './qa-menu/qa-menu.component';
 
 
 @NgModule({
@@ -60,7 +62,9 @@ import { HomePageComponent } from './home-page/home-page.component';
     CountryCodeSelectComponent,
     MobileInputComponent,
     CodeInputComponent,
-    HomePageComponent
+    HomePageComponent,
+    HomeToolbarComponent,
+    QaMenuComponent
   ],
   imports: [
     FormsModule,

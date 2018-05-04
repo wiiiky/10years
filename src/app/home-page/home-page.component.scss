@@ -1,82 +1,15 @@
-:host {
-    div.toolbar {
-        width: 100%;
-        box-shadow: 0 1px 3px rgba(26,26,26,.1);
-        background: white;
-        background-clip: content-box;
-        div.toolbar-content {
+:host{
+    div.app-main{
+        display: flex;
+        align-items: center;
+        transition: transform .3s,-webkit-transform .3s;
+        margin: 0 auto;
+        div.app-container{
+            padding-top: 10px;
             width: 1000px;
-            height: 100%;
-            height: 56px;
-            display: flex;
-            align-items: center;
-            transition: transform .3s,-webkit-transform .3s;
             margin: 0 auto;
-
-            a.toolbar-title{
-                color: #0084ff;
-                font-size: 30px;
-                text-decoration: none;
-                margin-right: 30px;
-            }
-
-            a.home-link,a.discover-link,a.topic-link {
-                text-decoration: none;
-                font-size: 15px;
-                line-height: 30px;
-                color: #8590a6;
-                margin-right: 30px;
-                &:hover{
-                    color: #175199;
-                }
-            }
-            div.input-button-container{
-              display: flex;
-              width: 400px;
-              position: relative;
-              div.input-wrapper{
-                  transition: width .2s ease, background .3s ease;
-                  box-sizing: border-box;
-                  padding: 4px 10px;
-                  font-size: 14px;
-                  display: flex;
-                  position: relative;
-                  border-width: 1px;
-                  border-style: solid;
-                  border-color:transparent;
-                  background: #f6f6f6;
-                  height: 34px;
-                  border-radius: 5px;
-                  width: 326px;
-                  input.search{
-                      width: 100%;
-                      border: none;
-                      background: none;
-                  }
-                  mat-icon.search-icon {
-                      color:#8590a6;
-                      cursor: pointer;
-                      background: transparent;
-                  }
-                  &.search-focused{
-                      width: 100%;
-                      background: white;
-                      border-color:#8590a6;
-                  }
-              }
-              div.buttoon-wrapper{
-                right: 0px;
-                position: absolute;
-                transition: transform .2s ease-out;
-                &.search-focused{
-                  transform: scale(0, 0);
-                }
-                button.ask-question {
-                  min-width: 56px;
-                  height: 34px;
-                  margin-left: auto;
-                }
-              }
+            div.feeds-container{
+                width: 670px;
             }
         }
     }
