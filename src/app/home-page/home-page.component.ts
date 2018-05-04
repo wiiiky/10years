@@ -16,7 +16,7 @@ export class HomePageComponent implements OnInit {
   constructor(private http: HttpClient,private router: Router) { }
 
   ngOnInit() {
-    this.http.get(APIConfig.HOST + APIConfig.PATH_USER_INFO,{ withCredentials: true }).subscribe(
+    this.http.get(APIConfig.HOST + APIConfig.PATH_ACCOUNT_INFO,{ withCredentials: true }).subscribe(
       data=>this.loggedin=true,
       err=>this.router.navigate(['/login']));
   }
