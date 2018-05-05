@@ -51,6 +51,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomePageComponent } from './home-page/home-page.component';
 import { HomeToolbarComponent } from './home-toolbar/home-toolbar.component';
 import { QaMenuComponent } from './qa-menu/qa-menu.component';
+import { QuestionCardComponent } from './question-card/question-card.component';
+import { QuestionFeedsComponent } from './question-feeds/question-feeds.component';
+import { QuestionFeedsService } from './question-feeds/question-feeds.service';
+import { ProfilePageComponent } from './profile-page/profile-page.component';
+import { MainPageComponent } from './main-page/main-page.component';
 
 
 @NgModule({
@@ -64,7 +69,11 @@ import { QaMenuComponent } from './qa-menu/qa-menu.component';
     CodeInputComponent,
     HomePageComponent,
     HomeToolbarComponent,
-    QaMenuComponent
+    QaMenuComponent,
+    QuestionCardComponent,
+    QuestionFeedsComponent,
+    ProfilePageComponent,
+    MainPageComponent
   ],
   imports: [
     FormsModule,
@@ -109,6 +118,7 @@ import { QaMenuComponent } from './qa-menu/qa-menu.component';
   ],
   providers: [
     CountryCodeService,
+    QuestionFeedsService,
   ],
   bootstrap: [AppComponent]
 })

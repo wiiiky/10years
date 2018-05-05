@@ -1,0 +1,13 @@
+<mat-card>
+    <span class="source">热门内容，来自<a class="topic-link" [routerLink]="['/']">{{data.topic.name}}</a></span>
+    <div class="author">
+      <img class="avatar" src="{{data.user.avatar}}" alt="跳舞" width="24" height="24">
+      <span class="name">{{data.user.name}}</span>
+      <span class="description">{{data.user.description}}</span>
+    </div>
+    <h2 class="title">
+      <a [routerLink]="['/']">{{data.title}}</a>
+    </h2>
+    <div class="description" [innerHTML]="data.description">
+    </div>
+</mat-card>

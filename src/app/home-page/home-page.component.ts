@@ -10,12 +10,8 @@ import { APIConfig } from '../app.config'
 })
 export class HomePageComponent implements OnInit {
 
-  private loggedin :boolean = false;
   constructor(private http: HttpClient,private router: Router) { }
 
   ngOnInit() {
-    this.http.get(APIConfig.HOST + APIConfig.PATH_ACCOUNT_INFO,{ withCredentials: true }).subscribe(
-      data=>this.loggedin=true,
-      err=>this.router.navigate(['/login']));
   }
 }
