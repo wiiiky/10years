@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { QuestionFeedsService } from './question-feeds.service';
+import { QuestionService } from '../service/question.service';
 
 @Component({
   selector: 'app-question-feeds',
@@ -8,12 +8,12 @@ import { QuestionFeedsService } from './question-feeds.service';
 })
 export class QuestionFeedsComponent implements OnInit {
 
-  constructor(private questionFeedsService: QuestionFeedsService) { }
+  constructor(private questionService: QuestionService) { }
 
   private questions;
 
   ngOnInit() {
-    this.questionFeedsService.GetQuestions().subscribe(data=>this.questions=data);
+    this.questionService.FindHotQuestions().subscribe(data=>this.questions=data);
   }
 
 }

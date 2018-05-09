@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router }  from '@angular/router';
+import { AccountService } from '../service/account.service';
 
 @Component({
   selector: 'app-home-toolbar',
@@ -9,7 +11,7 @@ export class HomeToolbarComponent implements OnInit {
 
   private searchFocused :boolean = false;
 
-  constructor() { }
+  constructor(private router: Router, private accountService: AccountService) { }
 
   ngOnInit() {
   }
@@ -21,5 +23,13 @@ export class HomeToolbarComponent implements OnInit {
 
   onSearchFocus(){
     this.searchFocused = true;
+  }
+
+  onLogout() {
+    this.accountService.logout().subscribe(data=>this.onSuccess());
+  }
+
+  onSuccess(){
+    this.router.navigate(['/login']);
   }
 }

@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MatSnackBar} from '@angular/material';
-import { HttpClient } from '@angular/common/http';
-import { APIConfig } from '../app.config'
+import { AccountService } from '../service/account.service';
 
 @Component({
   selector: 'app-login-panel',
@@ -14,7 +13,7 @@ export class LoginPanelComponent implements OnInit {
   number: string;
   password: string;
 
-  constructor(private router :Router, private http: HttpClient, private snackBar: MatSnackBar) { }
+  constructor(private router :Router, private accountService: AccountService, private snackBar: MatSnackBar) { }
 
   ngOnInit() {
   }
@@ -37,13 +36,8 @@ export class LoginPanelComponent implements OnInit {
     if(this.password.length==0){
       return;
     }
-    let data = {
-      mobile: this.number,
-      password: this.password,
-    };
     console.debug(this.number, this.password);
-    this.http.put(APIConfig.HOST+APIConfig.PATH_LOGIN, data, { withCredentials: true }).subscribe(
-          data=>this.onSuccess(data), resp=>this.onError(resp));
+    this.accountService.login(this.number, this.password).subscribe((data)=> this.onSuccess(data), (err)=>this.onError(err));
   }
 
   onSuccess(data) {

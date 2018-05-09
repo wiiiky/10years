@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { HttpClient } from '@angular/common/http';
-import { APIConfig } from '../app.config'
+import { AccountService } from '../service/account.service';
 
 @Component({
   selector: 'app-signup-panel',
@@ -14,7 +13,7 @@ export class SignupPanelComponent implements OnInit {
   number: string;
   code: string;
 
-  constructor(private http: HttpClient, private router: Router) { }
+  constructor(private apiService: AccountService, private router: Router) { }
 
   ngOnInit() {
   }
@@ -36,14 +35,13 @@ export class SignupPanelComponent implements OnInit {
       return;
     }
     console.debug(this.countryCode, this.number, this.code);
-    let data = {
-      country_code: this.countryCode,
-      mobile: this.number,
-      code: this.code,
-      password: '123456',
-    };
-    this.http.post(APIConfig.HOST+APIConfig.PATH_SIGNUP, data, { withCredentials: true }).subscribe(
-      data=>this.router.navigate(['/']),
-      err=>console.error(err));
+    this.apiService.signup(this.countryCode, this.number, this.code, '123456').subscribe((data)=>this.onSuccess(data), (err)=>this.onError(err));
+  }
+
+  onSuccess(data){
+    this.router.navigate(['/']);
+  }
+  onError(err){
+    console.log(err.error);
   }
 }
