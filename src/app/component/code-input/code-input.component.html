@@ -1,4 +1,4 @@
-<mat-form-field class="mobile-input">
+<mat-form-field>
   <input matInput type="text" placeholder="短信验证码" [(ngModel)]="code" (ngModelChange)="onCodeChanged($event)" [formControl]="formControl">
   <mat-error *ngIf="formControl.hasError('required')">
     请输入六位短信验证码

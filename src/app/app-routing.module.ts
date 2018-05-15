@@ -1,11 +1,11 @@
 import { NgModule }             from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginPageComponent } from './login-page/login-page.component';
-import { HomePageComponent } from './home-page/home-page.component';
-import { MainPageComponent } from './main-page/main-page.component';
-import { ProfilePageComponent } from './profile-page/profile-page.component';
-import { LoginPanelComponent } from './login-panel/login-panel.component';
-import { SignupPanelComponent } from './signup-panel/signup-panel.component';
+import { LoginPageComponent } from 'app/page/login/login-page.component';
+import { HomePageComponent } from 'app/page/home/home-page.component';
+import { MainPageComponent } from 'app/page/main/main-page.component';
+import { ProfilePageComponent } from 'app/page/profile/profile-page.component';
+import { LoginPanelComponent } from 'app/page/login-panel/login-panel.component';
+import { SignupPanelComponent } from 'app/page/signup-panel/signup-panel.component';
 
 
 const routes: Routes = [

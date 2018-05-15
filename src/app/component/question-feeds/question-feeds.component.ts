@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { QuestionService } from '../service/question.service';
+import { QuestionService } from 'app/service/question.service';
 
 @Component({
   selector: 'app-question-feeds',

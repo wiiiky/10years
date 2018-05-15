@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router }  from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-import { APIConfig } from '../app.config'
+import { APIConfig } from 'app/app.config'
 
 @Component({
   selector: 'app-main-page',

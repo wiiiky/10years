@@ -37,26 +37,26 @@ import {
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { AppComponent } from './app.component';
-import { LoginPageComponent } from './login-page/login-page.component';
-import { SignupPanelComponent } from './signup-panel/signup-panel.component';
-import { LoginPanelComponent } from './login-panel/login-panel.component';
-import { CountryCodeSelectComponent } from './country-code-select/country-code-select.component';
-import { CountryCodeService } from './country-code-select/country-code.service';
-import { MobileInputComponent } from './mobile-input/mobile-input.component';
+import { AppComponent } from 'app/app.component';
+import { LoginPageComponent } from 'app/page/login/login-page.component';
+import { SignupPanelComponent } from 'app/page/signup-panel/signup-panel.component';
+import { LoginPanelComponent } from 'app/page/login-panel/login-panel.component';
+import { CountryCodeSelectComponent } from 'app/component/country-code-select/country-code-select.component';
+import { CountryCodeService } from 'app/service/country-code.service';
+import { MobileInputComponent } from 'app/component/mobile-input/mobile-input.component';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { CodeInputComponent } from './code-input/code-input.component';
-import { AppRoutingModule } from './app-routing.module';
+import { CodeInputComponent } from 'app/component/code-input/code-input.component';
+import { AppRoutingModule } from 'app/app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
-import { HomePageComponent } from './home-page/home-page.component';
-import { HomeToolbarComponent } from './home-toolbar/home-toolbar.component';
-import { QaMenuComponent } from './qa-menu/qa-menu.component';
-import { QuestionCardComponent } from './question-card/question-card.component';
-import { QuestionFeedsComponent } from './question-feeds/question-feeds.component';
-import { ProfilePageComponent } from './profile-page/profile-page.component';
-import { MainPageComponent } from './main-page/main-page.component';
-import { AccountService } from './service/account.service';
-import { QuestionService } from './service/question.service';
+import { HomePageComponent } from 'app/page/home/home-page.component';
+import { HomeToolbarComponent } from 'app/page/home-toolbar/home-toolbar.component';
+import { QaMenuComponent } from 'app/component/qa-menu/qa-menu.component';
+import { QuestionCardComponent } from 'app/component/question-card/question-card.component';
+import { QuestionFeedsComponent } from 'app/component/question-feeds/question-feeds.component';
+import { ProfilePageComponent } from 'app/page/profile/profile-page.component';
+import { MainPageComponent } from 'app/page/main/main-page.component';
+import { AccountService } from 'app/service/account.service';
+import { QuestionService } from 'app/service/question.service';
 
 
 @NgModule({

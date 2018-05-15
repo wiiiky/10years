@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MatSnackBar} from '@angular/material';
-import { AccountService } from '../service/account.service';
+import { AccountService } from 'app/service/account.service';
 
 @Component({
   selector: 'app-login-panel',

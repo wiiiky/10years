@@ -1,5 +1,9 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { CountryCode, CountryCodeService } from './country-code.service';
+import { CountryCode, CountryCodeService } from 'app/service/country-code.service';
+
+/*
+ * 国家选择框
+ */
 
 @Component({
   selector: 'app-country-code-select',

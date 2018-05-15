@@ -1,6 +1,10 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import {FormControl, FormGroupDirective, NgForm, Validators} from '@angular/forms';
 
+/*
+ * 短信验证码输入框
+ */
+
 @Component({
   selector: 'app-code-input',
   templateUrl: './code-input.component.html',
@@ -28,6 +32,5 @@ export class CodeInputComponent implements OnInit {
   sendCode(e) {
     e.stopPropagation();
     this.codeMessage = "重新获取短信验证码";
-    console.log("123456");
   }
 }
