@@ -46,13 +46,12 @@ export class LoginPanelComponent implements OnInit {
   }
 
   onError(resp) {
-    console.log(this);
     console.debug(resp.error);
     let err = resp.error;
     if(err.code == 101) {
-      this.snackBar.open("用户名密码错误", "确认", {
-        duration: 3000,
-      });
+      this.snackBar.open('用户名密码错误', '确认', {duration: 3000});
+    } else if (err.code==100) {
+      this.snackBar.open('用户不存在，请先注册', '确认', {duration:3000});
     }
   }
 }
