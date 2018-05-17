@@ -1,0 +1,19 @@
+:host{
+  background: #fff;
+  overflow: hidden;
+  border-radius: 2px;
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2),0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12);
+  box-sizing: border-box;
+  display: block;
+  div.cover {
+    width: 100%;
+    height: 240px;
+    background-size: cover;
+    background-color: #f6f6f6;
+    background-image: url(https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1526529439&di=5b4ece57a33998df01219dc44c90494d&src=http://pic.58pic.com/58pic/16/14/80/91J58PICzdA_1024.jpg);
+  }
+  div.info-container{
+    width: 100%;
+    height: 142px;
+  }
+}

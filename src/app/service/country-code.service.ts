@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { of } from 'rxjs/observable/of';
 import { HttpClient } from '@angular/common/http';
-import { APIConfig } from '../app.config'
+import { APIConfig } from 'app/app.config'
 import 'rxjs/add/operator/map'
 
 export class CountryCode {

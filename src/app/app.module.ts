@@ -55,6 +55,7 @@ import { QuestionCardComponent } from 'app/component/question-card/question-card
 import { QuestionFeedsComponent } from 'app/component/question-feeds/question-feeds.component';
 import { ProfilePageComponent } from 'app/page/profile/profile-page.component';
 import { MainPageComponent } from 'app/page/main/main-page.component';
+import { ProfileCardComponent } from 'app/component/profile-card/profile-card.component';
 import { AccountService } from 'app/service/account.service';
 import { QuestionService } from 'app/service/question.service';
 
@@ -74,7 +75,8 @@ import { QuestionService } from 'app/service/question.service';
     QuestionCardComponent,
     QuestionFeedsComponent,
     ProfilePageComponent,
-    MainPageComponent
+    ProfileCardComponent,
+    MainPageComponent,
   ],
   imports: [
     FormsModule,

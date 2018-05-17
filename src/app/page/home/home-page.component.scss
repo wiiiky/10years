@@ -1,16 +1,14 @@
 :host{
-    div.app-main{
-        display: flex;
-        align-items: center;
-        transition: transform .3s,-webkit-transform .3s;
+    display: flex;
+    align-items: center;
+    transition: transform .3s,-webkit-transform .3s;
+    margin: 0 auto;
+    div.app-container{
+        padding-top: 10px;
+        width: 1000px;
         margin: 0 auto;
-        div.app-container{
-            padding-top: 10px;
-            width: 1000px;
-            margin: 0 auto;
-            div.feeds-container{
-                width: 670px;
-            }
+        div.feeds-container{
+            width: 670px;
         }
     }
 }
