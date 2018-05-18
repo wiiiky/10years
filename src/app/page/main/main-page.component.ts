@@ -10,7 +10,7 @@ import { APIConfig } from 'app/app.config'
 })
 export class MainPageComponent implements OnInit {
 
-  private accessible :boolean = false;
+  public accessible :boolean = false;
 
   constructor(private http: HttpClient,private router: Router) { }
 

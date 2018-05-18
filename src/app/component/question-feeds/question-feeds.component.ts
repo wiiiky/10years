@@ -10,7 +10,7 @@ export class QuestionFeedsComponent implements OnInit {
 
   constructor(private questionService: QuestionService) { }
 
-  private questions;
+  public questions;
 
   ngOnInit() {
     this.questionService.FindHotQuestions().subscribe(data=>this.questions=data);

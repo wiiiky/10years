@@ -9,7 +9,7 @@ import { AccountService } from 'app/service/account.service';
 })
 export class HomeToolbarComponent implements OnInit {
 
-  private searchFocused :boolean = false;
+  public searchFocused :boolean = false;
 
   constructor(private router: Router, private accountService: AccountService) { }
 
