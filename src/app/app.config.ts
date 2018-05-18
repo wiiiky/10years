@@ -1,4 +1,5 @@
 import { isDevMode } from '@angular/core';
+import { environment } from '../environments/environment';
 
 export class APIConfig {
   static HOST:string;
@@ -13,8 +14,8 @@ export class APIConfig {
   static PATH_FILE = "/file";
 }
 
-if(isDevMode()){
-  APIConfig.HOST = APIConfig.DEV_HOST;
-}else{
+if (environment.production) {
   APIConfig.HOST = APIConfig.PROD_HOST;
+} else {
+  APIConfig.HOST = APIConfig.DEV_HOST;
 }
