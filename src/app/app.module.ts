@@ -1,4 +1,6 @@
+import 'hammerjs';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import {
   MatAutocompleteModule,
@@ -35,14 +37,12 @@ import {
   MatTooltipModule,
 } from '@angular/material';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from 'app/app.component';
 import { LoginPageComponent } from 'app/page/login/login-page.component';
 import { SignupPanelComponent } from 'app/page/signup-panel/signup-panel.component';
 import { LoginPanelComponent } from 'app/page/login-panel/login-panel.component';
 import { CountryCodeSelectComponent } from 'app/component/country-code-select/country-code-select.component';
-import { CountryCodeService } from 'app/service/country-code.service';
 import { MobileInputComponent } from 'app/component/mobile-input/mobile-input.component';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { CodeInputComponent } from 'app/component/code-input/code-input.component';
@@ -56,9 +56,13 @@ import { QuestionFeedsComponent } from 'app/component/question-feeds/question-fe
 import { ProfilePageComponent } from 'app/page/profile/profile-page.component';
 import { MainPageComponent } from 'app/page/main/main-page.component';
 import { ProfileCardComponent } from 'app/component/profile-card/profile-card.component';
+import { ImageCropperComponent } from 'app/component/image-cropper/image-cropper.component';
+import { CoverEditorComponent } from 'app/component/cover-editor/cover-editor.component';
+import { CountryCodeService } from 'app/service/country-code.service';
 import { AccountService } from 'app/service/account.service';
 import { QuestionService } from 'app/service/question.service';
-
+import { FileService } from 'app/service/file.service';
+import { UserService } from 'app/service/user.service';
 
 @NgModule({
   declarations: [
@@ -77,11 +81,14 @@ import { QuestionService } from 'app/service/question.service';
     ProfilePageComponent,
     ProfileCardComponent,
     MainPageComponent,
+    ImageCropperComponent,
+    CoverEditorComponent,
   ],
   imports: [
     FormsModule,
     ReactiveFormsModule,
     BrowserModule,
+    BrowserAnimationsModule,
     MatAutocompleteModule,
     MatButtonModule,
     MatButtonToggleModule,
@@ -115,7 +122,6 @@ import { QuestionService } from 'app/service/question.service';
     MatToolbarModule,
     MatTooltipModule,
     MatFormFieldModule,
-    BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
   ],
@@ -123,6 +129,8 @@ import { QuestionService } from 'app/service/question.service';
     CountryCodeService,
     QuestionService,
     AccountService,
+    FileService,
+    UserService,
   ],
   bootstrap: [AppComponent]
 })

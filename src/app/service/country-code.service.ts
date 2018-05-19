@@ -15,7 +15,7 @@ export class CountryCodeService {
   constructor(private http: HttpClient) { }
 
   getSupportedCountryCodes(): Observable<CountryCode[]> {
-    var url :string = APIConfig.HOST + APIConfig.PATH_SUPPORTED_COUNTRIES;
+    let url = APIConfig.HOST + APIConfig.PATH_SUPPORTED_COUNTRIES;
     return this.http.get(url).map(this.extractData);
   }
 

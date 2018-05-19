@@ -12,6 +12,8 @@ export class APIConfig {
   static PATH_LOGOUT = "/account/token";
   static PATH_QUESTIONES = "/questions";
   static PATH_FILE = "/file";
+  static PATH_SELF_PROFILE = "/user/profile";
+  static PATH_USER_COVER = "/user/cover";
 }
 
 if (environment.production) {

@@ -1,0 +1,41 @@
+:host {
+  div.action-container {
+    position: relative;
+    height: 80px;
+    background: #fff;
+    border-bottom: 1px solid #ebebeb;
+    box-shadow: 0 1px 3px rgba(26,26,26,.1);
+
+    align-items: center;
+    display: flex;
+    padding: 0px 24px;
+
+    div.action-title-container{
+      user-select: none;
+      span.action-title{
+        font-size: 20px;
+        color: #1a1a1a;
+        display: block;
+      }
+      span.action-subtitle{
+        font-size: 13px;
+        color: #8590a6;
+      }
+    }
+
+    div.slider-container{
+      margin-left: 140px;
+      mat-slider{
+        width: 220px;
+      }
+    }
+
+    div.button-container{
+      position: absolute;
+      right: 0px;
+      button{
+        margin-right: 24px;
+      }
+    }
+  }
+}
