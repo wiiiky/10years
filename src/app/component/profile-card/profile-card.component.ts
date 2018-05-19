@@ -44,7 +44,7 @@ export class ProfileCardComponent implements OnInit {
     let self = this;
     var img = new Image;
     img.onload = function() {
-      if(img.width<1200 || img.height<240){
+      if(img.width < 1200 || img.height < 240){
         self.snackBar.open("请上传宽度大于 1200px，高度大于 240px 的封面图片。", "确认", {
           duration: 3000,
         });
@@ -72,7 +72,7 @@ export class ProfileCardComponent implements OnInit {
     });
   }
 
-  onCoverEditorCancelled(){
+  onCoverEditorCancelled(e){
     this.showCoverEditor = false;
   }
 }
