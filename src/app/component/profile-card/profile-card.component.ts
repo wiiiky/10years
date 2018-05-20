@@ -19,6 +19,7 @@ export class ProfileCardComponent implements OnInit {
   constructor(private userService: UserService, private fileService: FileService, private snackBar: MatSnackBar) { }
 
   showCoverEditor = false;
+  uploadingCover = false;
 
   ngOnInit() {
     this.userService.GetUserProfile('').subscribe(data=>this.onGetProfile(data), err=>this.onProfileError());
@@ -29,6 +30,8 @@ export class ProfileCardComponent implements OnInit {
       data.cover = this.fileService.GetFileURL(data.cover);
     }
     this.data = data;
+    this.showCoverEditor = false;
+    this.uploadingCover = false;
   }
 
   onProfileError(){
@@ -54,10 +57,15 @@ export class ProfileCardComponent implements OnInit {
       self.showCoverEditor = true;
     }
     img.src = URL.createObjectURL(e.target.files[0]);
+    e.target.value = "";
   }
 
   onCoverEditorSave(img){
-    this.showCoverEditor = false;
+    if(this.uploadingCover){
+      return;
+    }
+    this.data.cover = img;
+    this.uploadingCover = true;
     this.fileService.UploadDataURL(img).subscribe(data=>this.onCoverUpload(data), err=>this.onCoverUploadError(err));
   }
 
@@ -70,6 +78,7 @@ export class ProfileCardComponent implements OnInit {
     this.snackBar.open("图片上传失败", "确认", {
       duration: 3000,
     });
+    this.uploadingCover = false;
   }
 
   onCoverEditorCancelled(e){
