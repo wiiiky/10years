@@ -10,7 +10,7 @@ export class APIConfig {
   static PATH_SIGNUP = "/account";
   static PATH_LOGIN = "/account/token";
   static PATH_LOGOUT = "/account/token";
-  static PATH_QUESTIONES = "/questions";
+  static PATH_HOME_HOT_ANSWERS = "/home/hot/answers";
   static PATH_FILE = "/file";
   static PATH_SELF_PROFILE = "/user/profile";
   static PATH_USER_COVER = "/user/cover";

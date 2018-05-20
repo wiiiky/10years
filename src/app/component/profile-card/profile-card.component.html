@@ -7,4 +7,11 @@
   <app-cover-editor [hidden]="!showCoverEditor" (cancel)="onCoverEditorCancelled($event)" (save)="onCoverEditorSave($event)" #coverEditor></app-cover-editor>
 </div>
 <div class="info-container">
+  <div class="avatar-container">
+    <img class="avatar" width="160" height="160" src="{{data.avatar}}"/>
+  </div>
+  <div class="detail-container">
+    <span class="name">{{data.name}}</span>
+    <span class="description">{{data.description}}</span>
+  </div>
 </div>

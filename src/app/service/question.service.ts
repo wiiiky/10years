@@ -7,8 +7,8 @@ export class QuestionService {
 
   constructor(private http:HttpClient) { }
 
-  FindHotQuestions() {
-    let url = APIConfig.HOST + APIConfig.PATH_QUESTIONES;
+  FindHotAnswers(page, limit = 10) {
+    let url = APIConfig.HOST + APIConfig.PATH_HOME_HOT_ANSWERS;
     return this.http.get(url, { withCredentials: true });
   }
 

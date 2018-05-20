@@ -12,7 +12,6 @@ export class QuestionCardComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.data.topic = this.data.topics[0];
   }
 
 }

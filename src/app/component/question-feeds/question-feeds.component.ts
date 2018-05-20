@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { QuestionService } from 'app/service/question.service';
+import { FileService } from 'app/service/file.service';
 
 @Component({
   selector: 'app-question-feeds',
@@ -8,12 +9,20 @@ import { QuestionService } from 'app/service/question.service';
 })
 export class QuestionFeedsComponent implements OnInit {
 
-  constructor(private questionService: QuestionService) { }
+  constructor(private questionService: QuestionService, private fileService: FileService) { }
 
-  public questions;
+  public hotanswers;
 
   ngOnInit() {
-    this.questionService.FindHotQuestions().subscribe(data=>this.questions=data);
+    this.questionService.FindHotAnswers(1).subscribe(data=>this.getHotAnswers(data));
+  }
+
+  getHotAnswers(data){
+    for(let i in data){
+      let d = data[i];
+      d.answer.user.avatar = this.fileService.GetFileURL(d.answer.user.avatar);
+    }
+    this.hotanswers = data;
   }
 
 }

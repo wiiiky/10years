@@ -29,6 +29,9 @@ export class ProfileCardComponent implements OnInit {
     if(data.cover!=""){
       data.cover = this.fileService.GetFileURL(data.cover);
     }
+    if(data.avatar!=""){
+      data.avatar = this.fileService.GetFileURL(data.avatar);
+    }
     this.data = data;
     this.showCoverEditor = false;
     this.uploadingCover = false;

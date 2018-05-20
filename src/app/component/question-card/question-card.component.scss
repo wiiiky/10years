@@ -44,8 +44,13 @@
         }
       }
     }
-    div.description {
+    div.content {
       font-size: 15px;
+    }
+    span.description {
+      font-size: 15px;
+      display: inline-block;
+      margin-left: 6px;
     }
   }
 }
