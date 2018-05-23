@@ -17,7 +17,12 @@ export class MainPageComponent implements OnInit {
   ngOnInit() {
     this.http.get(APIConfig.HOST + APIConfig.PATH_ACCOUNT_INFO,{ withCredentials: true }).subscribe(
       data=>this.accessible=true,
-      err=>this.router.navigate(['/login']));
+      err=>this.gotoLogin(err));
+  }
+
+  gotoLogin(err){
+    let url = this.router.url;
+    this.router.navigate(['/login'], { queryParams: { redirect: url }});
   }
 
 }

@@ -12,10 +12,21 @@ export class LoginPanelComponent implements OnInit {
 
   number: string;
   password: string;
+  redirect: string;
+  sub: any;
 
   constructor(private router :Router, private accountService: AccountService, private snackBar: MatSnackBar) { }
 
   ngOnInit() {
+    this.sub = this.router.routerState.root.queryParams
+      .subscribe(params => {
+        // Defaults to 0 if no query param provided.
+        this.redirect = params['redirect'] || '/';
+      });
+  }
+
+  ngOnDestroy() {
+    this.sub.unsubscribe();
   }
 
   onNumberChanged(v) {
@@ -42,7 +53,7 @@ export class LoginPanelComponent implements OnInit {
 
   onSuccess(data) {
     console.debug(data);
-    this.router.navigate(['/'])
+    this.router.navigate([this.redirect]);
   }
 
   onError(resp) {
