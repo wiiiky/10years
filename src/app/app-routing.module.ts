@@ -6,6 +6,7 @@ import { MainPageComponent } from 'app/page/main/main-page.component';
 import { ProfilePageComponent } from 'app/page/profile/profile-page.component';
 import { LoginPanelComponent } from 'app/page/login-panel/login-panel.component';
 import { SignupPanelComponent } from 'app/page/signup-panel/signup-panel.component';
+import { TopicPageComponent } from 'app/page/topic/topic-page.component';
 
 
 const routes: Routes = [
@@ -23,6 +24,11 @@ const routes: Routes = [
         component: ProfilePageComponent,
         pathMatch: 'full',
       },
+      {
+        path: 'topic/:id',
+        component: TopicPageComponent,
+        pathMatch: 'full',
+      }
     ],
   },
   {

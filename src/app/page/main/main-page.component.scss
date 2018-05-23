@@ -1,0 +1,12 @@
+:host{
+  div.main-container{
+    padding-top: 52px;
+
+    app-home-toolbar{
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      z-index: 100;
+    }
+  }
+}

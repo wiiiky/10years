@@ -26,6 +26,11 @@
         font-size: 14px;
         color: #646464;
         vertical-align: middle;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        width: 300px;
+        display: inline-block;
       }
     }
     h2.title{
@@ -47,10 +52,41 @@
     div.excerpt {
       font-size: 15px;
     }
-    span.description {
-      font-size: 15px;
-      display: inline-block;
-      margin-left: 6px;
+
+    div.action-container{
+      padding-top: 10px;
+      button.like,button.dislike {
+        border-radius: 2px;
+        line-height: 30px;
+        appearance: none;
+        padding: 0px 12px;
+        color: #0084ff;
+        background-color: rgba(0,132,255,.1);
+        border-color: transparent;
+        text-align: center;
+        cursor: pointer;
+        display: inline-block;
+        transition: background-color 0.5s ease-out;
+        >svg{
+          vertical-align: text-bottom;
+          line-height: 30px;
+          fill: #0084ff;
+        }
+        &:hover{
+          background-color: rgba(0,132,255,.15);
+        }
+      }
+      button.like {
+        >svg{
+          margin-right: 8px;
+        }
+      }
+      button.dislike{
+        margin-left: 4px;
+        >svg{
+          transform: rotate(180deg);
+        }
+      }
     }
   }
 }

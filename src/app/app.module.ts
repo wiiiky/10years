@@ -58,6 +58,7 @@ import { MainPageComponent } from 'app/page/main/main-page.component';
 import { ProfileCardComponent } from 'app/component/profile-card/profile-card.component';
 import { ImageCropperComponent } from 'app/component/image-cropper/image-cropper.component';
 import { CoverEditorComponent } from 'app/component/cover-editor/cover-editor.component';
+import { TopicPageComponent } from 'app/page/topic/topic-page.component';
 import { CountryCodeService } from 'app/service/country-code.service';
 import { AccountService } from 'app/service/account.service';
 import { QuestionService } from 'app/service/question.service';
@@ -83,6 +84,7 @@ import { UserService } from 'app/service/user.service';
     MainPageComponent,
     ImageCropperComponent,
     CoverEditorComponent,
+    TopicPageComponent,
   ],
   imports: [
     FormsModule,
