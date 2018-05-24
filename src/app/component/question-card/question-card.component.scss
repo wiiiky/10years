@@ -76,10 +76,6 @@
         &:hover{
           background-color: rgba(0,132,255,.15);
         }
-        &::-moz-focus-inner {
-          outline: none;
-          border: 0;
-        }
 
         &.active {
           background-color: #0084ff;
