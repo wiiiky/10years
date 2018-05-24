@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { MatSnackBar} from '@angular/material';
 import { AccountService } from 'app/service/account.service';
 
 @Component({
@@ -13,7 +14,7 @@ export class SignupPanelComponent implements OnInit {
   number: string;
   code: string;
 
-  constructor(private apiService: AccountService, private router: Router) { }
+  constructor(private apiService: AccountService, private router: Router, private snackBar: MatSnackBar) { }
 
   ngOnInit() {
   }
@@ -35,13 +36,20 @@ export class SignupPanelComponent implements OnInit {
       return;
     }
     console.debug(this.countryCode, this.number, this.code);
-    this.apiService.signup(this.countryCode, this.number, this.code, '123456').subscribe((data)=>this.onSuccess(data), (err)=>this.onError(err));
+    this.apiService.signup(this.countryCode, this.number, this.code, '123456').subscribe((data)=>this.onSuccess(data), (resp)=>this.onError(resp));
   }
 
   onSuccess(data){
     this.router.navigate(['/']);
   }
-  onError(err){
-    console.log(err.error);
+  onError(resp){
+    let err = resp.error;
+    console.log(err);
+    if(err.code == 104) {
+      let snackBarRef = this.snackBar.open('手机号已经注册，请直接登录', '确认', {duration: 3000});
+      snackBarRef.onAction().subscribe(() => {
+        this.router.navigate(['/login']);
+      });
+    }
   }
 }

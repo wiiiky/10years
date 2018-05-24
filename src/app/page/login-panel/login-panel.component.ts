@@ -62,7 +62,10 @@ export class LoginPanelComponent implements OnInit {
     if(err.code == 101) {
       this.snackBar.open('用户名密码错误', '确认', {duration: 3000});
     } else if (err.code==100) {
-      this.snackBar.open('用户不存在，请先注册', '确认', {duration:3000});
+      let snackBarRef = this.snackBar.open('用户不存在，请先注册', '确认', {duration:3000});
+      snackBarRef.onAction().subscribe(() => {
+        this.router.navigate(['/signup']);
+      });
     }
   }
 }
