@@ -21,4 +21,14 @@ export class QuestionService {
     let url = APIConfig.HOST + APIConfig.PATH_ANSWER_DOWNVOTE.replace(":answerID", answerID);
     return this.http.post(url, null, { withCredentials: true });
   }
+
+  UndoUpvoteAnswer(answerID) {
+    let url = APIConfig.HOST + APIConfig.PATH_ANSWER_UPVOTE.replace(":answerID", answerID);
+    return this.http.delete(url, { withCredentials: true });
+  }
+
+  UndoDownvoteAnswer(answerID) {
+    let url = APIConfig.HOST + APIConfig.PATH_ANSWER_DOWNVOTE.replace(":answerID", answerID);
+    return this.http.delete(url, { withCredentials: true });
+  }
 }
