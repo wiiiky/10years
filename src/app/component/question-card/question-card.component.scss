@@ -55,8 +55,9 @@
 
     div.action-container{
       padding-top: 10px;
-      button.like,button.dislike {
-        border-radius: 2px;
+      button.upvote, button.downvote {
+        outline: none;
+        border-radius: 3px;
         line-height: 30px;
         appearance: none;
         padding: 0px 12px;
@@ -75,13 +76,25 @@
         &:hover{
           background-color: rgba(0,132,255,.15);
         }
+        &::-moz-focus-inner {
+          outline: none;
+          border: 0;
+        }
+
+        &.active {
+          background-color: #0084ff;
+          color: white;
+          >svg{
+            fill: white;
+          }
+        }
       }
-      button.like {
+      button.upvote {
         >svg{
           margin-right: 8px;
         }
       }
-      button.dislike{
+      button.downvote{
         margin-left: 4px;
         >svg{
           transform: rotate(180deg);

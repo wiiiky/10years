@@ -14,4 +14,14 @@ export class QuestionCardComponent implements OnInit {
   ngOnInit() {
   }
 
+  onUpvote() {
+    this.data.relationship.upvoted = !this.data.relationship.upvoted;
+    this.data.relationship.downvoted = false;
+  }
+
+  onDownvote() {
+    this.data.relationship.downvoted = !this.data.relationship.downvoted;
+    this.data.relationship.upvoted = false;
+  }
+
 }
