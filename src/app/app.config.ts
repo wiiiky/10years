@@ -14,6 +14,8 @@ export class APIConfig {
   static PATH_FILE = "/file";
   static PATH_SELF_PROFILE = "/user/profile";
   static PATH_USER_COVER = "/user/cover";
+  static PATH_ANSWER_UPVOTE = "/answer/:answerID/upvote";
+  static PATH_ANSWER_DOWNVOTE = "/answer/:answerID/downvote";
 }
 
 if (environment.production) {

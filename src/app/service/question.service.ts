@@ -12,4 +12,13 @@ export class QuestionService {
     return this.http.get(url, { withCredentials: true });
   }
 
+  UpvoteAnswer(answerID) {
+    let url = APIConfig.HOST + APIConfig.PATH_ANSWER_UPVOTE.replace(":answerID", answerID);
+    return this.http.post(url, null, { withCredentials: true });
+  }
+
+  DownvoteAnswer(answerID) {
+    let url = APIConfig.HOST + APIConfig.PATH_ANSWER_DOWNVOTE.replace(":answerID", answerID);
+    return this.http.post(url, null, { withCredentials: true });
+  }
 }
