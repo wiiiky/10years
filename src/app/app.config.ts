@@ -16,6 +16,7 @@ export class APIConfig {
   static PATH_USER_COVER = "/user/cover";
   static PATH_ANSWER_UPVOTE = "/answer/:answerID/upvote";
   static PATH_ANSWER_DOWNVOTE = "/answer/:answerID/downvote";
+  static PATH_TOPICS = "/topics";
 }
 
 if (environment.production) {

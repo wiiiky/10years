@@ -9,7 +9,7 @@
         <mat-icon (mousedown)="onSearchClicked()" class="search-icon">search</mat-icon>
       </div>
       <div class="buttoon-wrapper" [ngClass]="{'search-focused':searchFocused}">
-        <button mat-raised-button class="ask-question" color="primary">提问</button>
+        <button mat-raised-button class="ask-question" color="primary" (click)="onAskClicked()">提问</button>
       </div>
     </div>
 

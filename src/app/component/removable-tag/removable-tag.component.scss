@@ -1,0 +1,50 @@
+:host {
+  position: relative;
+  display: inline-block;
+  height: 30px;
+  padding: 0 12px;
+  font-size: 14px;
+  line-height: 30px;
+  color: #0084ff;
+  vertical-align: top;
+  border-radius: 100px;
+  background-color: rgba(0,132,255,.1);
+  padding-right: 28px;
+  margin: 4px 2px;
+  transition: background-color 0.5s ease-out;
+
+  &:hover{
+    background-color: rgba(0,132,255,.2);
+  }
+
+  span.content {
+    font-size: 14px;
+    line-height: 30px;
+    color: #0084ff;
+    a{
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+
+  button.remove {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    cursor: pointer;
+    padding: 0;
+    background: none;
+    border: none;
+    outline: none;
+    color: inherit;
+
+    svg{
+      display: block;
+      cursor: pointer;
+      color: inherit;
+    }
+  }
+}

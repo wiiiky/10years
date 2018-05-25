@@ -53,6 +53,8 @@ import { QuestionFeedsComponent } from 'app/component/question-feeds/question-fe
 import { ProfileCardComponent } from 'app/component/profile-card/profile-card.component';
 import { ImageCropperComponent } from 'app/component/image-cropper/image-cropper.component';
 import { CoverEditorComponent } from 'app/component/cover-editor/cover-editor.component';
+import { AskDialogComponent } from 'app/component/ask-dialog/ask-dialog.component';
+import { RemovableTagComponent } from 'app/component/removable-tag/removable-tag.component';
 /* PAGE */
 import { TopicPageComponent } from 'app/page/topic/topic-page.component';
 import { ProfilePageComponent } from 'app/page/profile/profile-page.component';
@@ -90,6 +92,8 @@ import { UserService } from 'app/service/user.service';
     CoverEditorComponent,
     TopicPageComponent,
     SearchPageComponent,
+    AskDialogComponent,
+    RemovableTagComponent,
   ],
   imports: [
     FormsModule,
@@ -138,6 +142,9 @@ import { UserService } from 'app/service/user.service';
     AccountService,
     FileService,
     UserService,
+  ],
+  entryComponents: [
+    AskDialogComponent,
   ],
   bootstrap: [AppComponent]
 })

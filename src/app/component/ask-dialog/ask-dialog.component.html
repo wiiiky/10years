@@ -1,0 +1,20 @@
+<h1 mat-dialog-title>写下你的问题</h1>
+<h4 mat-dialog-title>描述精确的问题更易得到解答</h4>
+<div mat-dialog-content>
+  <mat-form-field class="title-input">
+    <input matInput placeholder="问题标题" [(ngModel)]="data.title">
+  </mat-form-field>
+  <div class="topic-container">
+    <app-removable-tag *ngFor="let topic of data.topics" [name]="topic.name" [link]="'/topic/' + topic.id" (close)="onTagRemoved(topic.id)"></app-removable-tag>
+    <input placeholder="{{topicholder}}" [(ngModel)]="topic" (ngModelChange)="onTopicInputChanged($event)" class="topic-input" [matAutocomplete]="auto">
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option *ngFor="let topic of searchTopics" [value]="topic.name" (click)="onOptionClick($event, topic)">
+        <span>{{ topic.name }}</span>
+      </mat-option>
+    </mat-autocomplete>
+  </div>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button cdkFocusInitial>Ok</button>
+</div>

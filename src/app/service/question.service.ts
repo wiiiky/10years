@@ -31,4 +31,9 @@ export class QuestionService {
     let url = APIConfig.HOST + APIConfig.PATH_ANSWER_DOWNVOTE.replace(":answerID", answerID);
     return this.http.delete(url, { withCredentials: true });
   }
+
+  FindTopics(q) {
+    let url = APIConfig.HOST + APIConfig.PATH_TOPICS + "?q=" + q;
+    return this.http.get(url, { withCredentials: true });
+  }
 }

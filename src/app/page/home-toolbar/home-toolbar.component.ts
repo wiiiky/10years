@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router }  from '@angular/router';
 import { AccountService } from 'app/service/account.service';
+import { AskDialogComponent } from 'app/component/ask-dialog/ask-dialog.component';
+import { MatDialog } from '@angular/material';
 
 @Component({
   selector: 'app-home-toolbar',
@@ -12,7 +14,7 @@ export class HomeToolbarComponent implements OnInit {
   public searchFocused :boolean = false;
   public q :string = '';
 
-  constructor(private router: Router, private accountService: AccountService) { }
+  constructor(private router: Router, private accountService: AccountService, public dialog: MatDialog) { }
 
   ngOnInit() {
   }
@@ -30,14 +32,29 @@ export class HomeToolbarComponent implements OnInit {
     this.accountService.logout().subscribe(data=>this.onSuccess());
   }
 
-  onSuccess(){
+  onSuccess() {
     this.router.navigate(['/login']);
   }
 
-  onSearchClicked(){
+  onSearchClicked() {
     if(this.q.length == 0){
       return;
     }
     this.router.navigate(['/search'], {queryParams:{q:this.q}});
+  }
+
+  onAskClicked() {
+    let data = {
+      title: '',
+      topics: [],
+    }
+    let dialogRef = this.dialog.open(AskDialogComponent, {
+      width: '595px',
+      data: data,
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.debug('The dialog was closed', result);
+    });
   }
 }
