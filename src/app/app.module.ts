@@ -38,27 +38,31 @@ import {
 } from '@angular/material';
 import { MatFormFieldModule } from '@angular/material/form-field';
 
+/* COMPONENT */
 import { AppComponent } from 'app/app.component';
-import { LoginPageComponent } from 'app/page/login/login-page.component';
-import { SignupPanelComponent } from 'app/page/signup-panel/signup-panel.component';
-import { LoginPanelComponent } from 'app/page/login-panel/login-panel.component';
 import { CountryCodeSelectComponent } from 'app/component/country-code-select/country-code-select.component';
 import { MobileInputComponent } from 'app/component/mobile-input/mobile-input.component';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { CodeInputComponent } from 'app/component/code-input/code-input.component';
 import { AppRoutingModule } from 'app/app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
-import { HomePageComponent } from 'app/page/home/home-page.component';
 import { HomeToolbarComponent } from 'app/page/home-toolbar/home-toolbar.component';
 import { QaMenuComponent } from 'app/component/qa-menu/qa-menu.component';
 import { QuestionCardComponent } from 'app/component/question-card/question-card.component';
 import { QuestionFeedsComponent } from 'app/component/question-feeds/question-feeds.component';
-import { ProfilePageComponent } from 'app/page/profile/profile-page.component';
-import { MainPageComponent } from 'app/page/main/main-page.component';
 import { ProfileCardComponent } from 'app/component/profile-card/profile-card.component';
 import { ImageCropperComponent } from 'app/component/image-cropper/image-cropper.component';
 import { CoverEditorComponent } from 'app/component/cover-editor/cover-editor.component';
+/* PAGE */
 import { TopicPageComponent } from 'app/page/topic/topic-page.component';
+import { ProfilePageComponent } from 'app/page/profile/profile-page.component';
+import { MainPageComponent } from 'app/page/main/main-page.component';
+import { HomePageComponent } from 'app/page/home/home-page.component';
+import { LoginPageComponent } from 'app/page/login/login-page.component';
+import { SignupPanelComponent } from 'app/page/signup-panel/signup-panel.component';
+import { LoginPanelComponent } from 'app/page/login-panel/login-panel.component';
+import { SearchPageComponent } from 'app/page/search/search-page.component';
+/*  SERVICE */
 import { CountryCodeService } from 'app/service/country-code.service';
 import { AccountService } from 'app/service/account.service';
 import { QuestionService } from 'app/service/question.service';
@@ -85,6 +89,7 @@ import { UserService } from 'app/service/user.service';
     ImageCropperComponent,
     CoverEditorComponent,
     TopicPageComponent,
+    SearchPageComponent,
   ],
   imports: [
     FormsModule,

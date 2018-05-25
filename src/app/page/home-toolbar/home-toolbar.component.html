@@ -5,9 +5,8 @@
     <a class="topic-link" [routerLink]="['/']">话题</a>
     <div class="search-container">
       <div class="input-wrapper"  [ngClass]="{'search-focused':searchFocused}">
-        <input class="search" (blur)="onSearchBlur()" (focus)="onSearchFocus()" placeholder="输入您想搜索的内容">
-        <mat-icon class="search-icon">search</mat-icon>
-        <!-- <button class="search-button" mat-raised-button color="primary"><mat-icon>search</mat-icon></button> -->
+        <input [(ngModel)]="q" (keyup.enter)="onSearchClicked()" class="search" (blur)="onSearchBlur()" (focus)="onSearchFocus()" placeholder="输入您想搜索的内容">
+        <mat-icon (mousedown)="onSearchClicked()" class="search-icon">search</mat-icon>
       </div>
       <div class="buttoon-wrapper" [ngClass]="{'search-focused':searchFocused}">
         <button mat-raised-button class="ask-question" color="primary">提问</button>

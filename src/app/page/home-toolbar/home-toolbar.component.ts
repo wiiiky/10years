@@ -10,6 +10,7 @@ import { AccountService } from 'app/service/account.service';
 export class HomeToolbarComponent implements OnInit {
 
   public searchFocused :boolean = false;
+  public q :string = '';
 
   constructor(private router: Router, private accountService: AccountService) { }
 
@@ -31,5 +32,12 @@ export class HomeToolbarComponent implements OnInit {
 
   onSuccess(){
     this.router.navigate(['/login']);
+  }
+
+  onSearchClicked(){
+    if(this.q.length == 0){
+      return;
+    }
+    this.router.navigate(['/search'], {queryParams:{q:this.q}});
   }
 }
