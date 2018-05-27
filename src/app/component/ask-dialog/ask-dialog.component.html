@@ -6,9 +6,9 @@
   </mat-form-field>
   <div class="topic-container">
     <app-removable-tag *ngFor="let topic of data.topics" [name]="topic.name" [link]="'/topic/' + topic.id" (close)="onTagRemoved(topic.id)"></app-removable-tag>
-    <input placeholder="{{topicholder}}" [(ngModel)]="topic" (ngModelChange)="onTopicInputChanged($event)" class="topic-input" [matAutocomplete]="auto">
-    <mat-autocomplete #auto="matAutocomplete">
-      <mat-option *ngFor="let topic of searchTopics" [value]="topic.name" (click)="onOptionClick($event, topic)">
+    <input placeholder="{{topicholder}}" (keydown.backspace)="onInputDelete($event)" [(ngModel)]="topic" (ngModelChange)="onTopicInputChanged($event)" class="topic-input" [matAutocomplete]="auto">
+    <mat-autocomplete (optionSelected)="onOptionSelected($event)"  (displayWith)="displayTopicOption($v)" #auto="matAutocomplete">
+      <mat-option *ngFor="let topic of searchTopics" [value]="topic" >
         <span>{{ topic.name }}</span>
       </mat-option>
     </mat-autocomplete>

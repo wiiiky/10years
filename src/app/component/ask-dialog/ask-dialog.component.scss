@@ -24,6 +24,8 @@
     box-sizing: border-box;
     transition: background-color .2s,border .2s;
     padding: 6px 12px;
+    display: flex;
+    flex-wrap: wrap;
 
     input.topic-input{
       padding: 0;
@@ -36,11 +38,12 @@
       outline: none;
       resize: none;
       line-height: 24px;
-      flex: none;
+      flex: 1;
       height: 30px;
       margin-top: 2px;
       margin-bottom: 2px;
-      width: 100%;
+      margin-left: 2px;
+      min-width: 200px;
     }
   }
 }
