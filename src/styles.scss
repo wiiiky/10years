@@ -14,3 +14,19 @@ button::-moz-focus-inner, a {
 *:not(mat-icon):not(.fa) {
   font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,PingFang SC,Microsoft YaHei,Source Han Sans SC,Noto Sans CJK SC,WenQuanYi Micro Hei,sans-serif!important;
 }
+
+div.fr-toolbar{
+  border-top: none!important;
+  button.fr-btn.fr-command:not(.fr-active){
+    i.fa {
+      color: #77839c;
+    }
+  }
+}
+
+div.fr-view {
+  padding: 0 8px!important;
+  p{
+    margin: 8px 0px!important;
+  }
+}

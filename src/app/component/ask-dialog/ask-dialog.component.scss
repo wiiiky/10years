@@ -12,11 +12,26 @@
     margin-bottom: 0px;
   }
 
-  mat-form-field.title-input{
-    width: 100%;
+  div.mat-dialog-content {
+    padding-bottom: 4px;
+
+    mat-form-field.title-input{
+      width: 100%;
+    }
+
+    div.question-content{
+      margin-top: 30px;
+    }
   }
 
-  div.description{
-    margin-top: 30px;
+  div.mat-dialog-actions {
+    padding-top: 40px;
+    padding-bottom: 48px;
+
+    button.submit{
+      width: 232px;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }

@@ -5,9 +5,8 @@
     <input matInput placeholder="问题标题" [(ngModel)]="data.title">
   </mat-form-field>
   <app-topic-input [(ngModel)]="data.topics"></app-topic-input>
-  <div class="description" [froalaEditor]>Hello, Froala!</div>
+  <div class="question-content" [froalaEditor]="froalaOptions" [(ngModel)]="data.content"></div>
 </div>
 <div mat-dialog-actions>
-  <button mat-button (click)="onNoClick()">No Thanks</button>
-  <button mat-button cdkFocusInitial>Ok</button>
+  <button class="submit" mat-raised-button color="primary" (click)="submitQuestion()" cdkFocusInitial>提交问题</button>
 </div>
