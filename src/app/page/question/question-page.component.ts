@@ -12,7 +12,7 @@ export class QuestionPageComponent implements OnInit {
   constructor(private router: Router, private route: ActivatedRoute, private questionService: QuestionService) { }
 
   public id :string;
-  public data :Object = {};
+  public data: any = {};
 
   ngOnInit() {
     this.route.params.subscribe(params => this.GetQuestion(params['id']));
