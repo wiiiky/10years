@@ -1,0 +1,8 @@
+<app-removable-tag *ngFor="let topic of topics" [name]="topic.name" [link]="'/topic/' + topic.id" (close)="onTagRemoved(topic.id)"></app-removable-tag>
+<input placeholder="{{topicholder}}" (keydown.backspace)="onInputDelete($event)" [(ngModel)]="topic" (ngModelChange)="onTopicInputChanged($event)" class="topic-input" [matAutocomplete]="auto">
+<mat-icon class="search">search</mat-icon>
+<mat-autocomplete (optionSelected)="onOptionSelected($event)"  (displayWith)="displayTopicOption($event)" #auto="matAutocomplete">
+  <mat-option *ngFor="let topic of searchTopics" [value]="topic" >
+    <span>{{ topic.name }}</span>
+  </mat-option>
+</mat-autocomplete>

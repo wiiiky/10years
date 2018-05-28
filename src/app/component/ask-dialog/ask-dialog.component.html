@@ -4,15 +4,8 @@
   <mat-form-field class="title-input">
     <input matInput placeholder="问题标题" [(ngModel)]="data.title">
   </mat-form-field>
-  <div class="topic-container">
-    <app-removable-tag *ngFor="let topic of data.topics" [name]="topic.name" [link]="'/topic/' + topic.id" (close)="onTagRemoved(topic.id)"></app-removable-tag>
-    <input placeholder="{{topicholder}}" (keydown.backspace)="onInputDelete($event)" [(ngModel)]="topic" (ngModelChange)="onTopicInputChanged($event)" class="topic-input" [matAutocomplete]="auto">
-    <mat-autocomplete (optionSelected)="onOptionSelected($event)"  (displayWith)="displayTopicOption($v)" #auto="matAutocomplete">
-      <mat-option *ngFor="let topic of searchTopics" [value]="topic" >
-        <span>{{ topic.name }}</span>
-      </mat-option>
-    </mat-autocomplete>
-  </div>
+  <app-topic-input [(ngModel)]="data.topics"></app-topic-input>
+  <div class="description" [froalaEditor]>Hello, Froala!</div>
 </div>
 <div mat-dialog-actions>
   <button mat-button (click)="onNoClick()">No Thanks</button>

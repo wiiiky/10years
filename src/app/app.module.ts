@@ -1,4 +1,8 @@
 import 'hammerjs';
+import * as $ from 'jquery';
+window["$"] = $;
+window["jQuery"] = $;
+import "froala-editor/js/froala_editor.pkgd.min.js";
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
@@ -37,6 +41,7 @@ import {
   MatTooltipModule,
 } from '@angular/material';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
 
 /* COMPONENT */
 import { AppComponent } from 'app/app.component';
@@ -55,6 +60,7 @@ import { ImageCropperComponent } from 'app/component/image-cropper/image-cropper
 import { CoverEditorComponent } from 'app/component/cover-editor/cover-editor.component';
 import { AskDialogComponent } from 'app/component/ask-dialog/ask-dialog.component';
 import { RemovableTagComponent } from 'app/component/removable-tag/removable-tag.component';
+import { TopicInputComponent } from 'app/component/topic-input/topic-input.component';
 /* PAGE */
 import { TopicPageComponent } from 'app/page/topic/topic-page.component';
 import { ProfilePageComponent } from 'app/page/profile/profile-page.component';
@@ -94,6 +100,7 @@ import { UserService } from 'app/service/user.service';
     SearchPageComponent,
     AskDialogComponent,
     RemovableTagComponent,
+    TopicInputComponent,
   ],
   imports: [
     FormsModule,
@@ -135,6 +142,8 @@ import { UserService } from 'app/service/user.service';
     MatFormFieldModule,
     AppRoutingModule,
     HttpClientModule,
+    FroalaEditorModule.forRoot(),
+    FroalaViewModule.forRoot(),
   ],
   providers: [
     CountryCodeService,
