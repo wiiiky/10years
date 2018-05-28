@@ -36,4 +36,19 @@ export class QuestionService {
     let url = APIConfig.HOST + APIConfig.PATH_TOPICS + "?q=" + q;
     return this.http.get(url, { withCredentials: true });
   }
+
+  CreateQuestion(title, topics, content) {
+    let url = APIConfig.HOST + APIConfig.PATH_QUESTION;
+    let data = {
+      title: title,
+      topics: topics,
+      content: content,
+    };
+    return this.http.post(url, data, { withCredentials: true });
+  }
+
+  GetQuestion(id) {
+    let url = APIConfig.HOST + APIConfig.PATH_QUESTION + "/" + id;
+    return this.http.get(url, { withCredentials: true });
+  }
 }

@@ -70,6 +70,7 @@ import { LoginPageComponent } from 'app/page/login/login-page.component';
 import { SignupPanelComponent } from 'app/page/signup-panel/signup-panel.component';
 import { LoginPanelComponent } from 'app/page/login-panel/login-panel.component';
 import { SearchPageComponent } from 'app/page/search/search-page.component';
+import { QuestionPageComponent } from 'app/page/question/question-page.component';
 /*  SERVICE */
 import { CountryCodeService } from 'app/service/country-code.service';
 import { AccountService } from 'app/service/account.service';
@@ -101,6 +102,7 @@ import { UserService } from 'app/service/user.service';
     AskDialogComponent,
     RemovableTagComponent,
     TopicInputComponent,
+    QuestionPageComponent,
   ],
   imports: [
     FormsModule,

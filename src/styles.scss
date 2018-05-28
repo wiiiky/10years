@@ -30,3 +30,9 @@ div.fr-view {
     margin: 8px 0px!important;
   }
 }
+
+a[href="https://www.froala.com/wysiwyg-editor?k=u"] {
+  display: none !important;
+  position: absolute;
+  top: -99999999px;
+}

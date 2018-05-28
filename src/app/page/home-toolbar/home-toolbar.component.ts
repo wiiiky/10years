@@ -52,9 +52,5 @@ export class HomeToolbarComponent implements OnInit {
       width: '595px',
       data: data,
     });
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.debug('The dialog was closed', result);
-    });
   }
 }

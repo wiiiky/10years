@@ -8,6 +8,7 @@ import { LoginPanelComponent } from 'app/page/login-panel/login-panel.component'
 import { SignupPanelComponent } from 'app/page/signup-panel/signup-panel.component';
 import { TopicPageComponent } from 'app/page/topic/topic-page.component';
 import { SearchPageComponent } from 'app/page/search/search-page.component';
+import { QuestionPageComponent } from 'app/page/question/question-page.component';
 
 
 const routes: Routes = [
@@ -33,6 +34,11 @@ const routes: Routes = [
       {
         path: 'search',
         component: SearchPageComponent,
+        pathMatch: 'full',
+      },
+      {
+        path: 'question/:id',
+        component: QuestionPageComponent,
         pathMatch: 'full',
       }
     ],
