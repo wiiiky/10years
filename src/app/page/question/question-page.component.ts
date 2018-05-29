@@ -13,13 +13,21 @@ export class QuestionPageComponent implements OnInit {
 
   public id :string;
   public data: any = {};
+  public answers = [];
 
   ngOnInit() {
     this.route.params.subscribe(params => this.GetQuestion(params['id']));
   }
 
   GetQuestion(id){
+    this.id = id;
     this.questionService.GetQuestion(id).subscribe(data=>this.data=data);
+    this.questionService.GetQuestionAnswers(id, 1).subscribe(data=>this.updateAnswers(data));
+  }
+
+  updateAnswers(data){
+    this.answers = this.answers.concat(data);
+    console.log(this.answers);
   }
 
 }

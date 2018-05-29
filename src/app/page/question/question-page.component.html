@@ -1,2 +1,8 @@
-<h3>{{data.title}}</h3>
-<div>{{data.content}}</div>
+<div class="app-container">
+  <h3>{{data.title}}</h3>
+  <div>{{data.content}}</div>
+
+  <div *ngFor="let answer of answers">
+    <mat-card style="margin-top:10px" [innerHTML]="answer.content"></mat-card>
+  </div>
+</div>

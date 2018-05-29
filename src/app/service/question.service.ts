@@ -51,4 +51,9 @@ export class QuestionService {
     let url = APIConfig.HOST + APIConfig.PATH_QUESTION + "/" + id;
     return this.http.get(url, { withCredentials: true });
   }
+
+  GetQuestionAnswers(id, page, limit=10) {
+    let url = APIConfig.HOST + APIConfig.PATH_QUESTION_ANSWERS.replace(":questionID", id) + "?page=" + page + "&limit=" + limit;
+    return this.http.get(url, { withCredentials: true });
+  }
 }

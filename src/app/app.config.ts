@@ -18,6 +18,7 @@ export class APIConfig {
   static PATH_ANSWER_DOWNVOTE = "/answer/:answerID/downvote";
   static PATH_TOPICS = "/topics";
   static PATH_QUESTION = "/question";
+  static PATH_QUESTION_ANSWERS = "/question/:questionID/answers";
 }
 
 if (environment.production) {
