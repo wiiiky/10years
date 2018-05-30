@@ -2,11 +2,11 @@ import { Component, OnInit, Input } from '@angular/core';
 import { QuestionService } from 'app/service/question.service';
 
 @Component({
-  selector: 'app-question-card',
-  templateUrl: './question-card.component.html',
-  styleUrls: ['./question-card.component.scss']
+  selector: 'app-hot-answer-card',
+  templateUrl: './hot-answer-card.component.html',
+  styleUrls: ['./hot-answer-card.component.scss']
 })
-export class QuestionCardComponent implements OnInit {
+export class HotAnswerCardComponent implements OnInit {
 
   @Input() data;
 

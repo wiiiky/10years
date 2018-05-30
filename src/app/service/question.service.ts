@@ -7,9 +7,9 @@ export class QuestionService {
 
   constructor(private http:HttpClient) { }
 
-  FindHotAnswers(page, limit = 10) {
-    let url = APIConfig.HOST + APIConfig.PATH_HOME_HOT_ANSWERS;
-    return this.http.get(url, { withCredentials: true });
+  FindHotAnswers(before='', limit = 10) {
+    let url = APIConfig.HOST + APIConfig.PATH_HOME_HOT_ANSWERS + "?before="+encodeURIComponent(before) + "&limit=" + limit;
+    return this.http.get(url, { withCredentials: true});
   }
 
   UpvoteAnswer(answerID) {

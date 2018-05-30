@@ -53,8 +53,8 @@ import { AppRoutingModule } from 'app/app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeToolbarComponent } from 'app/page/home-toolbar/home-toolbar.component';
 import { QaMenuComponent } from 'app/component/qa-menu/qa-menu.component';
-import { QuestionCardComponent } from 'app/component/question-card/question-card.component';
-import { QuestionFeedsComponent } from 'app/component/question-feeds/question-feeds.component';
+import { HotAnswerCardComponent } from 'app/component/hot-answer-card/hot-answer-card.component';
+import { HotAnswerFeedsComponent } from 'app/component/hot-answer-feeds/hot-answer-feeds.component';
 import { ProfileCardComponent } from 'app/component/profile-card/profile-card.component';
 import { ImageCropperComponent } from 'app/component/image-cropper/image-cropper.component';
 import { CoverEditorComponent } from 'app/component/cover-editor/cover-editor.component';
@@ -90,8 +90,8 @@ import { UserService } from 'app/service/user.service';
     HomePageComponent,
     HomeToolbarComponent,
     QaMenuComponent,
-    QuestionCardComponent,
-    QuestionFeedsComponent,
+    HotAnswerCardComponent,
+    HotAnswerFeedsComponent,
     ProfilePageComponent,
     ProfileCardComponent,
     MainPageComponent,
