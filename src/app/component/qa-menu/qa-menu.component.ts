@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { AskDialogComponent } from 'app/component/ask-dialog/ask-dialog.component';
+import { MatDialog } from '@angular/material';
 /*
  * QA = Question & Answer
  */
@@ -11,9 +12,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QaMenuComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit() {
+  }
+
+  onAskClicked(){
+    let data = {
+      title: '',
+      topics: [],
+    }
+    let dialogRef = this.dialog.open(AskDialogComponent, {
+      width: '595px',
+      data: data,
+    });
   }
 
 }

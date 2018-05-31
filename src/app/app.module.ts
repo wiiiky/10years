@@ -61,6 +61,7 @@ import { CoverEditorComponent } from 'app/component/cover-editor/cover-editor.co
 import { AskDialogComponent } from 'app/component/ask-dialog/ask-dialog.component';
 import { RemovableTagComponent } from 'app/component/removable-tag/removable-tag.component';
 import { TopicInputComponent } from 'app/component/topic-input/topic-input.component';
+import { SearchTabComponent } from 'app/component/search-tab/search-tab.component';
 /* PAGE */
 import { TopicPageComponent } from 'app/page/topic/topic-page.component';
 import { ProfilePageComponent } from 'app/page/profile/profile-page.component';
@@ -103,6 +104,7 @@ import { UserService } from 'app/service/user.service';
     RemovableTagComponent,
     TopicInputComponent,
     QuestionPageComponent,
+    SearchTabComponent,
   ],
   imports: [
     FormsModule,

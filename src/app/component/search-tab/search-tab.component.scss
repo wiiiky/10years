@@ -1,0 +1,12 @@
+
+:host{
+  /deep/ div.mat-tab-label-container, /deep/ div.mat-tab-list, /deep/ div.mat-tab-body-wrapper, /deep/ div.mat-tab-body {
+    width: 1000px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  /deep/ div.mat-tab-body-wrapper {
+    margin-top: 5px;
+  }
+}

@@ -33,7 +33,7 @@ export class QuestionService {
   }
 
   FindTopics(q) {
-    let url = APIConfig.HOST + APIConfig.PATH_TOPICS + "?q=" + q;
+    let url = APIConfig.HOST + APIConfig.PATH_TOPICS + "?query=" + q;
     return this.http.get(url, { withCredentials: true });
   }
 

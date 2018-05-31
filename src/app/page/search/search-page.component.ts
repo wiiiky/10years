@@ -10,10 +10,10 @@ export class SearchPageComponent implements OnInit {
 
   constructor(private router: Router, private route: ActivatedRoute) { }
 
-  public q :string;
+  public query :string;
 
   ngOnInit() {
-    this.route.queryParams.subscribe(params=>this.q=params['q']);
+    this.route.queryParams.subscribe(params=>this.query=params['query']);
   }
 
 }

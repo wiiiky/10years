@@ -12,7 +12,7 @@ import { MatDialog } from '@angular/material';
 export class HomeToolbarComponent implements OnInit {
 
   public searchFocused :boolean = false;
-  public q :string = '';
+  public query :string = '';
 
   constructor(private router: Router, private accountService: AccountService, public dialog: MatDialog) { }
 
@@ -37,10 +37,10 @@ export class HomeToolbarComponent implements OnInit {
   }
 
   onSearchClicked() {
-    if(this.q.length == 0){
+    if(this.query.length == 0){
       return;
     }
-    this.router.navigate(['/search'], {queryParams:{q:this.q}});
+    this.router.navigate(['/search'], {queryParams:{query:this.query}});
   }
 
   onAskClicked() {
