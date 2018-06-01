@@ -26,8 +26,7 @@ export class HotAnswerFeedsComponent implements OnInit {
 
   getHotAnswers(data){
     for(let i in data){
-      let d = data[i];
-      d.answer.user.avatar = this.fileService.GetFileURL(d.answer.user.avatar);
+      data[i].answer.user.avatar = this.fileService.GetFileURL(data[i].answer.user.avatar);
     }
     this.hotanswers = this.hotanswers.concat(data);
     this.loading = false;

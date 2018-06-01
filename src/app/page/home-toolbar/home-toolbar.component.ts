@@ -29,7 +29,7 @@ export class HomeToolbarComponent implements OnInit {
   }
 
   onLogout() {
-    this.accountService.logout().subscribe(data=>this.onSuccess());
+    this.accountService.Logout().subscribe(data=>this.onSuccess());
   }
 
   onSuccess() {

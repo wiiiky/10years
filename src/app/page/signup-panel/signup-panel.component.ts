@@ -36,7 +36,7 @@ export class SignupPanelComponent implements OnInit {
       return;
     }
     console.debug(this.countryCode, this.number, this.code);
-    this.apiService.signup(this.countryCode, this.number, this.code, '123456').subscribe((data)=>this.onSuccess(data), (resp)=>this.onError(resp));
+    this.apiService.Signup(this.countryCode, this.number, this.code, '123456').subscribe((data)=>this.onSuccess(data), (resp)=>this.onError(resp));
   }
 
   onSuccess(data){

@@ -1,32 +1,36 @@
 import { Injectable } from '@angular/core';
 import { APIConfig } from 'app/app.config';
-import { HttpClient } from '@angular/common/http';
+import { HttpService } from 'app/service/http.service';
 
 @Injectable()
 export class AccountService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpService) { }
 
-  login(mobile, password) {
+  GetAccountInfo() {
+    return this.http.get(APIConfig.HOST + APIConfig.PATH_ACCOUNT_INFO);
+  }
+
+  Login(mobile, password) {
     let data = {
       mobile: mobile,
       password: password,
     };
-    return this.http.put(APIConfig.HOST+APIConfig.PATH_LOGIN, data, { withCredentials: true });
+    return this.http.put(APIConfig.HOST+APIConfig.PATH_LOGIN, data);
   }
 
-  signup(countryCode, mobile, code, password) {
+  Signup(countryCode, mobile, code, password) {
     let data = {
       country_code: countryCode,
       mobile: mobile,
       code: code,
       password: password,
     };
-    return this.http.post(APIConfig.HOST+APIConfig.PATH_SIGNUP, data, { withCredentials: true });
+    return this.http.post(APIConfig.HOST+APIConfig.PATH_SIGNUP, data);
   }
 
-  logout() {
-    return this.http.delete(APIConfig.HOST+APIConfig.PATH_LOGOUT, { withCredentials: true });
+  Logout() {
+    return this.http.delete(APIConfig.HOST+APIConfig.PATH_LOGOUT);
   }
 
 }

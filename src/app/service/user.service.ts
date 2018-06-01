@@ -1,17 +1,17 @@
 import { Injectable } from '@angular/core';
 import { APIConfig } from 'app/app.config';
-import { HttpClient } from '@angular/common/http';
+import { HttpService } from 'app/service/http.service';
 import { Observable } from 'rxjs';
 
 @Injectable()
 export class UserService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpService) { }
 
   /* 获取用户信息 */
   GetUserProfile(uid) : Observable<any> {
     let url = APIConfig.HOST + APIConfig.PATH_SELF_PROFILE;
-    return this.http.get(url, { withCredentials: true });
+    return this.http.get(url);
   }
 
   UpdateUserCover(cover) : Observable<any> {
@@ -19,6 +19,6 @@ export class UserService {
     let data = {
       'cover': cover,
     }
-    return this.http.put(url, data, { withCredentials: true });
+    return this.http.put(url, data);
   }
 }

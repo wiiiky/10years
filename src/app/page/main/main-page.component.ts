@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router }  from '@angular/router';
-import { HttpClient } from '@angular/common/http';
+import { AccountService } from 'app/service/account.service';
 import { APIConfig } from 'app/app.config'
 
 @Component({
@@ -12,12 +12,10 @@ export class MainPageComponent implements OnInit {
 
   public accessible :boolean = false;
 
-  constructor(private http: HttpClient,private router: Router) { }
+  constructor(private accountService: AccountService,private router: Router) { }
 
   ngOnInit() {
-    this.http.get(APIConfig.HOST + APIConfig.PATH_ACCOUNT_INFO,{ withCredentials: true }).subscribe(
-      data=>this.accessible=true,
-      err=>this.gotoLogin(err));
+    this.accountService.GetAccountInfo().subscribe(data=>this.accessible=true, err=>this.gotoLogin(err));
   }
 
   gotoLogin(err){

@@ -43,6 +43,19 @@ import {
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
 
+import {
+  Http,
+  ConnectionBackend,
+  RequestOptions,
+  RequestOptionsArgs,
+  XHRBackend,
+  Response,
+  Headers,
+  Request,
+  HttpModule
+} from '@angular/http';
+import { Router }  from '@angular/router';
+
 /* COMPONENT */
 import { AppComponent } from 'app/app.component';
 import { CountryCodeSelectComponent } from 'app/component/country-code-select/country-code-select.component';
@@ -78,6 +91,7 @@ import { AccountService } from 'app/service/account.service';
 import { QuestionService } from 'app/service/question.service';
 import { FileService } from 'app/service/file.service';
 import { UserService } from 'app/service/user.service';
+import { HttpService } from 'app/service/http.service';
 
 @NgModule({
   declarations: [
@@ -107,6 +121,7 @@ import { UserService } from 'app/service/user.service';
     SearchTabComponent,
   ],
   imports: [
+    HttpModule,
     FormsModule,
     ReactiveFormsModule,
     BrowserModule,
@@ -155,6 +170,13 @@ import { UserService } from 'app/service/user.service';
     AccountService,
     FileService,
     UserService,
+    {
+      provide: HttpService,
+      useFactory: (backend: XHRBackend, options: RequestOptions, router: Router) => {
+        return new HttpService(backend, options, router);
+      },
+      deps: [XHRBackend, RequestOptions]
+    }
   ],
   entryComponents: [
     AskDialogComponent,

@@ -1,30 +1,30 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpService } from 'app/service/http.service';
 import { APIConfig } from 'app/app.config'
 
 @Injectable()
 export class QuestionService {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpService) { }
 
   FindHotAnswers(before='', limit = 10) {
     let url = APIConfig.HOST + APIConfig.PATH_HOME_HOT_ANSWERS + "?before="+encodeURIComponent(before) + "&limit=" + limit;
-    return this.http.get(url, { withCredentials: true});
+    return this.http.get(url);
   }
 
   UpvoteAnswer(answerID) {
     let url = APIConfig.HOST + APIConfig.PATH_ANSWER_UPVOTE.replace(":answerID", answerID);
-    return this.http.post(url, null, { withCredentials: true });
+    return this.http.post(url, null);
   }
 
   DownvoteAnswer(answerID) {
     let url = APIConfig.HOST + APIConfig.PATH_ANSWER_DOWNVOTE.replace(":answerID", answerID);
-    return this.http.post(url, null, { withCredentials: true });
+    return this.http.post(url, null);
   }
 
   UndoUpvoteAnswer(answerID) {
     let url = APIConfig.HOST + APIConfig.PATH_ANSWER_UPVOTE.replace(":answerID", answerID);
-    return this.http.delete(url, { withCredentials: true });
+    return this.http.delete(url);
   }
 
   UndoDownvoteAnswer(answerID) {

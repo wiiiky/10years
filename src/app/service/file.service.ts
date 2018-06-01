@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpService } from 'app/service/http.service';
 import { APIConfig } from 'app/app.config'
 
 @Injectable()
 export class FileService {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpService) { }
 
   GetFileURL(id) {
     return APIConfig.HOST + APIConfig.PATH_FILE + "/" + id;
@@ -25,7 +25,7 @@ export class FileService {
     let formData = new FormData();
     let file = this.dataURLtoFile(dataURL, "filename");
     formData.append("file", file);
-    return this.http.post(url, formData, { withCredentials: true });
+    return this.http.post(url, formData);
   }
 
 }

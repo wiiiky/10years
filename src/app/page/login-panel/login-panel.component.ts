@@ -48,7 +48,7 @@ export class LoginPanelComponent implements OnInit {
       return;
     }
     console.debug(this.number, this.password);
-    this.accountService.login(this.number, this.password).subscribe((data)=> this.onSuccess(data), (err)=>this.onError(err));
+    this.accountService.Login(this.number, this.password).subscribe((data)=> this.onSuccess(data), (err)=>this.onError(err));
   }
 
   onSuccess(data) {
