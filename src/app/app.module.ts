@@ -75,6 +75,8 @@ import { AskDialogComponent } from 'app/component/ask-dialog/ask-dialog.componen
 import { RemovableTagComponent } from 'app/component/removable-tag/removable-tag.component';
 import { TopicInputComponent } from 'app/component/topic-input/topic-input.component';
 import { SearchTabComponent } from 'app/component/search-tab/search-tab.component';
+import { SearchQuestionCardComponent } from 'app/component/search-question-card/search-question-card.component';
+import { SearchQuestionFeedsComponent } from 'app/component/search-question-feeds/search-question-feeds.component';
 /* PAGE */
 import { TopicPageComponent } from 'app/page/topic/topic-page.component';
 import { ProfilePageComponent } from 'app/page/profile/profile-page.component';
@@ -119,6 +121,8 @@ import { HttpService } from 'app/service/http.service';
     TopicInputComponent,
     QuestionPageComponent,
     SearchTabComponent,
+    SearchQuestionCardComponent,
+    SearchQuestionFeedsComponent,
   ],
   imports: [
     HttpModule,
