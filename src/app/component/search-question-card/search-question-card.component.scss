@@ -1,0 +1,33 @@
+:host {
+  padding: 16px 20px;
+  display: block;
+  a.title {
+    display: block;
+    font-weight: 600;
+    font-synthesis: style;
+    line-height: 1.6;
+    font-size: 16px;
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.25s ease-out;
+
+    &:hover {
+      color: #175199;
+    }
+  }
+  div.top-answer-content{
+    margin-top: 5px;
+    font-size: 14px;
+    span{
+      color: inherit;
+      cursor: pointer;
+      &:hover {
+        color: #646464;
+      }
+    }
+  }
+
+  div.action-container{
+    padding-top: 10px;
+  }
+}

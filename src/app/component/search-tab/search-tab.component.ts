@@ -8,11 +8,19 @@ import { Router } from '@angular/router';
 })
 export class SearchTabComponent implements OnInit {
 
-  @Input() query;
+  public _query:string;
 
   constructor(private router: Router) {  }
 
   ngOnInit() {
   }
 
+  @Input()
+  public set query(v: string) {
+    this._query = v;
+  }
+
+  public get query(): string {
+    return this._query;
+  }
 }

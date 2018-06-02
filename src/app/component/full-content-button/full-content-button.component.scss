@@ -1,0 +1,26 @@
+:host{
+  button.more {
+    display: inline-block;
+    outline: none;
+    padding: 0;
+    margin-left: 4px;
+    color: #175199;
+    line-height: inherit;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    text-align: center;
+    cursor: pointer;
+    background: none;
+    transition: color 0.25s ease-out;
+    >svg{
+      line-height: inherit;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    &:hover{
+      color: #646464;
+    }
+  }
+}

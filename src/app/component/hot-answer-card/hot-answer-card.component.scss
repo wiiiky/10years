@@ -55,47 +55,6 @@
 
     div.action-container{
       padding-top: 10px;
-      button.upvote, button.downvote {
-        outline: none;
-        border-radius: 3px;
-        line-height: 30px;
-        appearance: none;
-        padding: 0px 12px;
-        color: #0084ff;
-        background-color: rgba(0,132,255,.1);
-        border-color: transparent;
-        text-align: center;
-        cursor: pointer;
-        display: inline-block;
-        transition: background-color 0.5s ease-out;
-        >svg{
-          vertical-align: text-bottom;
-          line-height: 30px;
-          fill: #0084ff;
-        }
-        &:hover{
-          background-color: rgba(0,132,255,.15);
-        }
-
-        &.active {
-          background-color: #0084ff;
-          color: white;
-          >svg{
-            fill: white;
-          }
-        }
-      }
-      button.upvote {
-        >svg{
-          margin-right: 8px;
-        }
-      }
-      button.downvote{
-        margin-left: 4px;
-        >svg{
-          transform: rotate(180deg);
-        }
-      }
 
       button.comment, button.share, button.favorite, button.report {
         line-height: inherit;

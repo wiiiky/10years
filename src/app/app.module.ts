@@ -77,6 +77,9 @@ import { TopicInputComponent } from 'app/component/topic-input/topic-input.compo
 import { SearchTabComponent } from 'app/component/search-tab/search-tab.component';
 import { SearchQuestionCardComponent } from 'app/component/search-question-card/search-question-card.component';
 import { SearchQuestionFeedsComponent } from 'app/component/search-question-feeds/search-question-feeds.component';
+import { UpvoteButtonComponent } from 'app/component/upvote-button/upvote-button.component';
+import { DownvoteButtonComponent } from 'app/component/downvote-button/downvote-button.component';
+import { FullContentButtonComponent } from 'app/component/full-content-button/full-content-button.component';
 /* PAGE */
 import { TopicPageComponent } from 'app/page/topic/topic-page.component';
 import { ProfilePageComponent } from 'app/page/profile/profile-page.component';
@@ -123,6 +126,9 @@ import { HttpService } from 'app/service/http.service';
     SearchTabComponent,
     SearchQuestionCardComponent,
     SearchQuestionFeedsComponent,
+    UpvoteButtonComponent,
+    DownvoteButtonComponent,
+    FullContentButtonComponent,
   ],
   imports: [
     HttpModule,
