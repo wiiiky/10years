@@ -81,6 +81,7 @@ import { UpvoteButtonComponent } from 'app/component/upvote-button/upvote-button
 import { DownvoteButtonComponent } from 'app/component/downvote-button/downvote-button.component';
 import { FullContentButtonComponent } from 'app/component/full-content-button/full-content-button.component';
 import { HotAnswerLoaderComponent } from 'app/component/hot-answer-loader/hot-answer-loader.component';
+import { SearchQuestionLoaderComponent } from 'app/component/search-question-loader/search-question-loader.component';
 /* PAGE */
 import { TopicPageComponent } from 'app/page/topic/topic-page.component';
 import { ProfilePageComponent } from 'app/page/profile/profile-page.component';
@@ -131,6 +132,7 @@ import { HttpService } from 'app/service/http.service';
     DownvoteButtonComponent,
     FullContentButtonComponent,
     HotAnswerLoaderComponent,
+    SearchQuestionLoaderComponent,
   ],
   imports: [
     HttpModule,

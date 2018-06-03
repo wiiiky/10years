@@ -1,0 +1,44 @@
+:host{
+  display: block;
+  // padding: 16px 20px;
+
+  div.loader{
+    position: relative;
+
+    div.loader-inner{
+      position: relative;
+      overflow: hidden;
+      background: #f6f6f6;
+      color: #fff;
+
+      div.loader-bg{
+        position: absolute;
+        width: 200%;
+        height: 100%;
+        background: linear-gradient(90deg,#f6f6f6 0,#ebebeb 20%,#f6f6f6 40%,#f6f6f6);
+        -webkit-animation: linear-double 1s linear 1ms infinite forwards;
+        animation: linear-double 1s linear 1ms infinite forwards;
+
+        @keyframes linear-double {
+          0% {
+              -webkit-transform: translateX(-56%);
+              transform: translateX(-56%);
+          }
+
+          100% {
+              -webkit-transform: translateX(56%);
+              transform: translateX(56%);
+          }
+        }
+      }
+
+      svg.loader-mask{
+        fill: white;
+        position: relative;
+        min-width: 100%;
+        vertical-align: top;
+        box-sizing: border-box;
+      }
+    }
+  }
+}
