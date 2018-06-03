@@ -49,8 +49,11 @@
         }
       }
     }
-    div.excerpt {
-      font-size: 15px;
+    div.content-container{
+      div.excerpt {
+        display: inline;
+        font-size: 15px;
+      }
     }
 
     div.action-container{

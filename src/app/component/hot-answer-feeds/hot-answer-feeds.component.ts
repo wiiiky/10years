@@ -17,11 +17,10 @@ export class HotAnswerFeedsComponent implements OnInit {
 
   public hotanswers = [];
   private el: HTMLElement;
-  private loading: boolean = false;
+  public loading: boolean = false;
 
   ngOnInit() {
-    this.loading = true;
-    this.questionService.FindHotAnswers('').subscribe(data=>this.getHotAnswers(data));
+    this.loadMore('');
   }
 
   getHotAnswers(data){
@@ -32,6 +31,12 @@ export class HotAnswerFeedsComponent implements OnInit {
     this.loading = false;
   }
 
+  loadMore(lastTime:string) {
+    this.loading = true;
+    // setTimeout(()=>this.questionService.FindHotAnswers(lastTime).subscribe(data=>this.getHotAnswers(data)), 3000)
+    this.questionService.FindHotAnswers(lastTime).subscribe(data=>this.getHotAnswers(data));
+  }
+
   @HostListener('window:scroll', [ ])
   onWindowScroll(){
     if(this.loading){
@@ -39,9 +44,8 @@ export class HotAnswerFeedsComponent implements OnInit {
     }
     const offset = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
     let last = this.hotanswers[this.hotanswers.length - 1];
-    if(offset + window.screen.availHeight > this.el.offsetHeight) {
-      this.loading = true;
-      this.questionService.FindHotAnswers(last.ctime).subscribe(data=>this.getHotAnswers(data));
+    if(offset + window.screen.availHeight > this.el.offsetHeight-300) {
+      this.loadMore(last.ctime);
     }
     console.log(offset + window.screen.availHeight, this.el.offsetHeight);
   }
