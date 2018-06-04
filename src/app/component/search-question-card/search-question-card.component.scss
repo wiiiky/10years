@@ -15,7 +15,7 @@
       color: #175199;
     }
   }
-  div.top-answer-content{
+  div.top-answer-content-container{
     margin-top: 5px;
     font-size: 14px;
     span{
@@ -29,5 +29,14 @@
 
   div.action-container{
     padding-top: 10px;
+    display: flex;
+
+    app-assemble-button{
+      margin-left: auto;
+    }
+  }
+
+  mat-divider {
+    margin-top: 16px;
   }
 }

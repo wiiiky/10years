@@ -47,6 +47,6 @@ export class HotAnswerFeedsComponent implements OnInit {
     if(offset + window.screen.availHeight > this.el.offsetHeight-300) {
       this.loadMore(last.ctime);
     }
-    console.log(offset + window.screen.availHeight, this.el.offsetHeight);
+    //console.log(offset + window.screen.availHeight, this.el.offsetHeight);
   }
 }

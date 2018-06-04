@@ -1,0 +1,21 @@
+:host{
+  button.assemble {
+    line-height: inherit;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    margin-left: 24px;
+    font-size: 14px;
+    padding: 0;
+    outline: none;
+    appearance: none;
+    height: auto;
+    color: #8590a6;
+    cursor: pointer;
+    svg {
+      fill: #8590a6;
+      vertical-align: middle;
+      transform: rotate(180deg);
+    }
+  }
+}

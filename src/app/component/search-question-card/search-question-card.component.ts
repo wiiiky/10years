@@ -9,6 +9,7 @@ import { QuestionService } from 'app/service/question.service';
 export class SearchQuestionCardComponent implements OnInit {
 
   @Input() data;
+  public showFullContent: boolean = false;
 
   constructor(private questionService:QuestionService) { }
 

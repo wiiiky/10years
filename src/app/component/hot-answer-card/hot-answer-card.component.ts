@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ElementRef, Inject } from '@angular/core';
 import { QuestionService } from 'app/service/question.service';
+import { DOCUMENT } from "@angular/platform-browser";
 
 @Component({
   selector: 'app-hot-answer-card',
@@ -9,8 +10,13 @@ import { QuestionService } from 'app/service/question.service';
 export class HotAnswerCardComponent implements OnInit {
 
   @Input() data;
+  public showFullContent: boolean = false;
+  private el: HTMLElement;
+  private originalOffsetTop:number = 0;
 
-  constructor(private questionService :QuestionService) { }
+  constructor(private questionService :QuestionService, @Inject(DOCUMENT) private document: any, el: ElementRef) {
+    this.el = el.nativeElement;
+  }
 
   ngOnInit() {
   }
@@ -55,6 +61,23 @@ export class HotAnswerCardComponent implements OnInit {
     this.data.user_answer_relationship.downvoted = false;
     this.data.answer.upvote_count = data.upvote_count;
     this.data.answer.downvote_count = data.downvote_count;
+  }
+
+  onShowContentButtonClick(){
+    this.showFullContent = true;
+    this.originalOffsetTop = $(window).scrollTop();
+    console.log(this.originalOffsetTop);
+  }
+
+  onHideContentButtonClick(){
+    this.showFullContent=false;
+    console.log(this.originalOffsetTop);
+    setTimeout(()=>{
+      window.scrollTo({
+        top: this.originalOffsetTop,
+        behavior: 'smooth',
+      });
+    });
   }
 
 }

@@ -1,9 +1,16 @@
 <a class="title" [routerLink]="['/question', data.question.id]">{{data.question.title}}</a>
-<div *ngIf="data.answer" class="top-answer-content">
-  <span *ngIf="data.answer">{{data.answer.excerpt}}</span>
-  <app-full-content-button></app-full-content-button>
+<div *ngIf="data.answer" class="top-answer-content-container">
+  <div *ngIf="!showFullContent" class="excerpt-container">
+    <span *ngIf="data.answer" [innerHTML]="data.answer.excerpt" (click)="showFullContent=true"></span>
+    <app-full-content-button (click)="showFullContent=true"></app-full-content-button>
+  </div>
+  <div *ngIf="showFullContent" class="content-container">
+    <div class="content" [innerHTML]="data.answer.content"></div>
+  </div>
 </div>
 <div *ngIf="data.answer" class="action-container">
   <app-upvote-button [lineHeight]="26" (click)="onUpvoteButtonClicked()" [count]="data.answer.upvote_count" [active]="data.user_answer_relationship.upvoted"></app-upvote-button>
   <app-downvote-button [lineHeight]="26"  (click)="onDownvoteButtonClicked()" [active]="data.user_answer_relationship.downvoted"></app-downvote-button>
+  <app-assemble-button *ngIf="showFullContent" (click)="showFullContent=false"></app-assemble-button>
 </div>
+<mat-divider></mat-divider>

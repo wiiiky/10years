@@ -50,14 +50,19 @@
       }
     }
     div.content-container{
-      div.excerpt {
-        display: inline;
-        font-size: 15px;
+      div.excerpt-container {
+        div.excerpt {
+          display: inline;
+          font-size: 15px;
+          cursor: pointer;
+        }
       }
     }
 
     div.action-container{
       padding-top: 10px;
+      align-items: center;
+      display: flex;
 
       button.comment, button.share, button.favorite, button.report {
         line-height: inherit;
@@ -74,7 +79,12 @@
         cursor: pointer;
         svg {
           fill: #8590a6;
+          vertical-align: middle;
         }
+      }
+
+      app-assemble-button{
+        margin-left: auto;
       }
     }
   }
