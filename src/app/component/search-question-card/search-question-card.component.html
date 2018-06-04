@@ -4,8 +4,7 @@
     <span *ngIf="data.answer" [innerHTML]="data.answer.excerpt" (click)="showFullContent=true"></span>
     <app-full-content-button (click)="showFullContent=true"></app-full-content-button>
   </div>
-  <div *ngIf="showFullContent" class="content-container">
-    <div class="content" [innerHTML]="data.answer.content"></div>
+  <div *ngIf="showFullContent" class="content" [innerHTML]="data.answer.content">
   </div>
 </div>
 <div *ngIf="data.answer" class="action-container">

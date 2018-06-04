@@ -13,9 +13,7 @@
         <div class="excerpt" [innerHTML]="data.answer.excerpt" (click)="onShowContentButtonClick()"></div>
         <app-full-content-button (click)="onShowContentButtonClick()"></app-full-content-button>
       </div>
-      <div *ngIf="showFullContent" class="content-container">
-        <div class="content" [innerHTML]="data.answer.content"></div>
-      </div>
+      <div *ngIf="showFullContent" class="content" [innerHTML]="data.answer.content"></div>
     </div>
 
     <div class="action-container">

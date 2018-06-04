@@ -75,7 +75,7 @@ export class HotAnswerCardComponent implements OnInit {
     setTimeout(()=>{
       window.scrollTo({
         top: this.originalOffsetTop,
-        behavior: 'smooth',
+        behavior: 'instant',
       });
     });
   }
