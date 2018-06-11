@@ -8,13 +8,7 @@
     <h2 class="title">
       <a [routerLink]="['/question', data.question.id]">{{data.question.title}}</a>
     </h2>
-    <div class="content-container">
-      <div *ngIf="!showFullContent" class="excerpt-container">
-        <div class="excerpt" [innerHTML]="data.answer.excerpt" (click)="onShowContentButtonClick()"></div>
-        <app-full-content-button (click)="onShowContentButtonClick()"></app-full-content-button>
-      </div>
-      <div *ngIf="showFullContent" class="content" [innerHTML]="data.answer.content"></div>
-    </div>
+    <app-content-viewer *ngIf="data.answer" [(ngModel)]="showFullContent" [excerpt]="data.answer.excerpt" [content]="data.answer.content" [scrollable]="true"></app-content-viewer>
 
     <div class="action-container">
       <app-upvote-button (click)="onUpvoteButtonClicked()" [count]="data.answer.upvote_count" [active]="data.user_answer_relationship.upvoted"></app-upvote-button>

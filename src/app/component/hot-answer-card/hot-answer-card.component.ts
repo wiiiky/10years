@@ -63,21 +63,14 @@ export class HotAnswerCardComponent implements OnInit {
     this.data.answer.downvote_count = data.downvote_count;
   }
 
-  onShowContentButtonClick(){
-    this.showFullContent = true;
-    this.originalOffsetTop = $(window).scrollTop();
-    console.log(this.originalOffsetTop);
-  }
+  // onShowContentButtonClick(){
+  //   this.showFullContent = true;
+  //   this.originalOffsetTop = $(window).scrollTop();
+  //   console.log(this.originalOffsetTop);
+  // }
 
   onHideContentButtonClick(){
     this.showFullContent=false;
-    console.log(this.originalOffsetTop);
-    setTimeout(()=>{
-      window.scrollTo({
-        top: this.originalOffsetTop,
-        behavior: 'instant',
-      });
-    });
   }
 
 }

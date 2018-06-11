@@ -83,6 +83,7 @@ import { FullContentButtonComponent } from 'app/component/full-content-button/fu
 import { HotAnswerLoaderComponent } from 'app/component/hot-answer-loader/hot-answer-loader.component';
 import { SearchQuestionLoaderComponent } from 'app/component/search-question-loader/search-question-loader.component';
 import { AssembleButtonComponent } from 'app/component/assemble-button/assemble-button.component';
+import { ContentViewerComponent } from 'app/component/content-viewer/content-viewer.component';
 /* PAGE */
 import { TopicPageComponent } from 'app/page/topic/topic-page.component';
 import { ProfilePageComponent } from 'app/page/profile/profile-page.component';
@@ -135,6 +136,7 @@ import { HttpService } from 'app/service/http.service';
     HotAnswerLoaderComponent,
     SearchQuestionLoaderComponent,
     AssembleButtonComponent,
+    ContentViewerComponent,
   ],
   imports: [
     HttpModule,

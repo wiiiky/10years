@@ -1,0 +1,6 @@
+<div *ngIf="!showFullContent" class="excerpt-container">
+  <div class="excerpt" [style.font-size.px]="fontSize" [innerHTML]="excerpt" (click)="showContent()"></div>
+  <app-full-content-button (click)="showContent()"></app-full-content-button>
+</div>
+<div *ngIf="showFullContent" class="content" [style.font-size.px]="fontSize" [innerHTML]="content">
+</div>
