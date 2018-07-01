@@ -10,9 +10,9 @@ import { AccountService } from 'app/service/account.service';
 })
 export class LoginPanelComponent implements OnInit {
 
-  number: string;
-  password: string;
-  redirect: string;
+  number: string = '';
+  password: string = '';
+  redirect: string = '';
   sub: any;
 
   constructor(private router :Router, private accountService: AccountService, private snackBar: MatSnackBar) { }

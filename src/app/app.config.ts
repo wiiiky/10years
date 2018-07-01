@@ -3,8 +3,11 @@ import { environment } from '../environments/environment';
 
 export class APIConfig {
   static HOST:string;
+  static SOURCE:string;
   static DEV_HOST = "http://127.0.0.1:1323/api";
   static PROD_HOST = "https://10.wikylyu.xyz/api";
+  static DEV_SOURCE = '137ff912-7106-11e8-9430-bb0f063260f6';
+  static PROD_SOURCE = '137ff912-7106-11e8-9430-bb0f063260f6';
   static PATH_SUPPORTED_COUNTRIES = "/supported_countries";
   static PATH_ACCOUNT_INFO = "/account";
   static PATH_SIGNUP = "/account";
@@ -24,6 +27,8 @@ export class APIConfig {
 
 if (environment.production) {
   APIConfig.HOST = APIConfig.PROD_HOST;
+  APIConfig.SOURCE = APIConfig.PROD_SOURCE;
 } else {
   APIConfig.HOST = APIConfig.DEV_HOST;
+  APIConfig.SOURCE = APIConfig.DEV_SOURCE;
 }

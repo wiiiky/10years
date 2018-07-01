@@ -10,6 +10,7 @@ import {
 } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
 import { Router }  from '@angular/router';
+import { APIConfig } from 'app/app.config'
 
 enum ContentType {
   JSON = "application/json",
@@ -47,8 +48,11 @@ export class HttpService extends Http {
   }
 
   request(url: Request, options?: RequestOptionsArgs): Observable<Response> {
-    console.debug('request...', url, options);
+    console.log('request...', url, options);
     url.withCredentials = true;
+    options = options || new RequestOptions();
+    options.headers = options.headers || new Headers();
+    url.headers.append('Source', APIConfig.SOURCE);
     return super.request(url, options).map(res => {
       let body = this.parseResponseBody(res);
       if(body!=null){

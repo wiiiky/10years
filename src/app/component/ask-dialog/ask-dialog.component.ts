@@ -43,7 +43,6 @@ export class AskDialogComponent {
   }
 
   onQuestionCreated(data){
-    console.log(data);
     this.router.navigate(['/question', data.id]);
     this.dialogRef.close();
   }

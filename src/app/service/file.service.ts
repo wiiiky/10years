@@ -8,7 +8,7 @@ export class FileService {
   constructor(private http:HttpService) { }
 
   GetFileURL(id) {
-    return APIConfig.HOST + APIConfig.PATH_FILE + "/" + id;
+    return APIConfig.HOST + APIConfig.PATH_FILE + "/" + id + '?_s=' + APIConfig.SOURCE;
   }
 
   dataURLtoFile(dataurl, filename) {
