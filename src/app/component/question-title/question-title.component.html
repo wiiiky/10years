@@ -1,0 +1,8 @@
+<div class="container">
+  <div>
+    <app-removable-tag *ngFor="let topic of topics"  [name]="topic.name" [link]="'/topic/' + topic.id" [removable]="false"></app-removable-tag>
+  </div>
+
+  <div class="title">{{title}}</div>
+  <div class="content">{{content}}</div>
+</div>

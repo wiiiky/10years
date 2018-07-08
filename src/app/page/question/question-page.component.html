@@ -1,7 +1,5 @@
-<div class="question-container">
-  <h3>{{data.title}}</h3>
-  <div>{{data.content}}</div>
-
+<app-question-title [topics]="data.topics" [title]="data.title" [content]="data.content"></app-question-title>
+<div class="answers">
   <div *ngFor="let answer of answers">
     <mat-card style="margin-top:10px" [innerHTML]="answer.content"></mat-card>
   </div>

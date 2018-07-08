@@ -12,6 +12,7 @@ export class RemovableTagComponent {
 
   @Input() name :string;
   @Input() link :string;
+  @Input() removable: boolean = true;
 
   constructor() { }
 
