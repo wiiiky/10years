@@ -9,7 +9,7 @@ import { QuestionService } from 'app/service/question.service';
 export class QuestionHeaderComponent implements OnInit {
 
   @Input() id: string;
-  public data: object = {};
+  public data: any = {};
 
   constructor(private questionService: QuestionService) { }
 
