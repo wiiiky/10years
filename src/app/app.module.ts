@@ -84,7 +84,7 @@ import { HotAnswerLoaderComponent } from 'app/component/hot-answer-loader/hot-an
 import { SearchQuestionLoaderComponent } from 'app/component/search-question-loader/search-question-loader.component';
 import { AssembleButtonComponent } from 'app/component/assemble-button/assemble-button.component';
 import { ContentViewerComponent } from 'app/component/content-viewer/content-viewer.component';
-import { QuestionTitleComponent } from 'app/component/question-title/question-title.component';
+import { QuestionHeaderComponent } from 'app/component/question-header/question-header.component';
 /* PAGE */
 import { TopicPageComponent } from 'app/page/topic/topic-page.component';
 import { ProfilePageComponent } from 'app/page/profile/profile-page.component';
@@ -138,7 +138,7 @@ import { HttpService } from 'app/service/http.service';
     SearchQuestionLoaderComponent,
     AssembleButtonComponent,
     ContentViewerComponent,
-    QuestionTitleComponent,
+    QuestionHeaderComponent,
   ],
   imports: [
     HttpModule,

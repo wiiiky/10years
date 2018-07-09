@@ -1,4 +1,4 @@
-<app-question-title [topics]="data.topics" [title]="data.title" [content]="data.content"></app-question-title>
+<app-question-header [id]="id"></app-question-header>
 <div class="answers">
   <div *ngFor="let answer of answers">
     <mat-card style="margin-top:10px" [innerHTML]="answer.content"></mat-card>

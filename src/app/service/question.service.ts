@@ -52,6 +52,16 @@ export class QuestionService {
     return this.http.get(url);
   }
 
+  FollowQuestion(id) {
+    let url = APIConfig.HOST + APIConfig.PATH_QUESTION_FOLLOW.replace(":questionID", id);
+    return this.http.post(url, {});
+  }
+
+  UnfollowQuestion(id) {
+    let url = APIConfig.HOST + APIConfig.PATH_QUESTION_FOLLOW.replace(":questionID", id);
+    return this.http.delete(url);
+  }
+
   FindQuestions(q, page=1, limit = 10) {
     let url = APIConfig.HOST + APIConfig.PATH_QUESTIONS + "?query=" + encodeURIComponent(q) + "&page=" + page + "&limit=" + limit;
     return this.http.get(url);

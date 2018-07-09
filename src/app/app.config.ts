@@ -23,6 +23,7 @@ export class APIConfig {
   static PATH_QUESTION = "/question";
   static PATH_QUESTIONS = "/questions";
   static PATH_QUESTION_ANSWERS = "/question/:questionID/answers";
+  static PATH_QUESTION_FOLLOW = "/question/:questionID/follow";
 }
 
 if (environment.production) {

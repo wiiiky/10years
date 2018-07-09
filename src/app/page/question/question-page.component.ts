@@ -21,7 +21,6 @@ export class QuestionPageComponent implements OnInit {
 
   GetQuestion(id){
     this.id = id;
-    this.questionService.GetQuestion(id).subscribe(data=>this.data=data);
     this.questionService.GetQuestionAnswers(id, 1).subscribe(data=>this.updateAnswers(data));
   }
 

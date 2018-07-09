@@ -1,0 +1,107 @@
+:host{
+  background: white;
+  display: block;
+  width: 100%;
+
+  div.container {
+    width: 980px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    position: relative;
+
+    div.left {
+      width: 670px;
+      div.title{
+        width: 667px;
+        margin-top: 12px;
+        margin-bottom: 4px;
+        font-size: 22px;
+        font-weight: 600;
+        font-synthesis: style;
+        line-height: 32px;
+        color: #1a1a1a;
+      }
+
+      div.content{
+        font-size: 15px;
+        color: #1a1a1a;
+      }
+
+      div.action-container {
+        margin-top: 20px;
+
+        button.answer-question, button.follow-question {
+          width: 96px;
+        }
+
+        button.answer-question{
+          margin-left: 15px;
+        }
+
+        button.comment, button.share, button.favorite, button.report {
+          line-height: inherit;
+          background-color: transparent;
+          border: none;
+          border-radius: 0;
+          margin-left: 24px;
+          font-size: 14px;
+          padding: 0;
+          outline: none;
+          appearance: none;
+          height: auto;
+          color: #8590a6;
+          cursor: pointer;
+          svg {
+            fill: #8590a6;
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+
+    div.right {
+      top: 20px;
+      right: 30px;
+      position: absolute;
+      display: flex;
+
+      div.followers, div.visitors {
+        display: inline-block;
+        text-align: center;
+
+        div.title {
+          font-size: 14px;
+          color: #8590a6;
+        }
+        strong.number {
+          display: inline-block;
+          font-size: 18px;
+          color: #1a1a1a;
+          font-weight: 600;
+          font-synthesis: style;
+        }
+        * {
+          transition: color 200ms ease-out;
+        }
+      }
+
+      div.divider {
+        width: 1px;
+        height: 52px;
+        background: #1a1a1a1a;
+        margin-left: 15px;
+        margin-right: 15px;
+      }
+
+      div.followers {
+        cursor: pointer;
+      }
+
+      div.followers:hover {
+        * {
+          color: #175199!important;
+        }
+      }
+    }
+  }
+}
