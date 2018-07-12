@@ -51,14 +51,16 @@
                 width: 326px;
                 input.search{
                     margin: 4px 0px 4px 10px;
-                    width: 100%;
+                    min-width: 0;
                     border: none;
+                    outline: none;
                     background: none;
+                    flex: 1;
                 }
                 mat-icon.search-icon {
                     color:white;
                     cursor: pointer;
-                    width: 40px;
+                    min-width: 40px;
                     height: 33px;
                     line-height: 33px;
                     background: #3f51b5;
@@ -74,18 +76,18 @@
                 }
             }
             div.buttoon-wrapper{
-            z-index: 0;
-            right: 0px;
-            position: absolute;
-            transition: transform .2s ease-out;
-            &.search-focused{
-                transform: scale(0, 0);
-            }
-            button.ask-question {
-                min-width: 56px;
-                height: 34px;
-                margin-left: auto;
-            }
+                z-index: 0;
+                right: 0px;
+                position: absolute;
+                transition: transform .2s ease-out;
+                &.search-focused{
+                    transform: scale(0, 0);
+                }
+                button.ask-question {
+                    min-width: 56px;
+                    height: 34px;
+                    margin-left: auto;
+                }
             }
         }
 
