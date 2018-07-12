@@ -8,7 +8,7 @@ export class QuestionService {
   constructor(private http:HttpService) { }
 
   FindHotAnswers(before='', limit = 10) {
-    let url = APIConfig.HOST + APIConfig.PATH_HOME_HOT_ANSWERS + "?before="+encodeURIComponent(before) + "&limit=" + limit;
+    let url = APIConfig.HOST + APIConfig.PATH_HOT_ANSWERS + "?before="+encodeURIComponent(before) + "&limit=" + limit;
     return this.http.get(url);
   }
 
