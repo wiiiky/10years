@@ -9,6 +9,7 @@ export class APIConfig {
   static DEV_SOURCE = '137ff912-7106-11e8-9430-bb0f063260f6';
   static PROD_SOURCE = '137ff912-7106-11e8-9430-bb0f063260f6';
   static PATH_SUPPORTED_COUNTRIES = "/supported_countries";
+  static PATH_SMS_SIGNUP = "/sms/signup";
   static PATH_ACCOUNT_INFO = "/account";
   static PATH_SIGNUP = "/account";
   static PATH_LOGIN = "/account/token";

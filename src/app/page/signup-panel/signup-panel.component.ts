@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { FormControl, FormGroupDirective, NgForm, Validators} from '@angular/forms';
 import { Router } from '@angular/router';
 import { MatSnackBar} from '@angular/material';
 import { AccountService } from 'app/service/account.service';
@@ -13,30 +14,33 @@ export class SignupPanelComponent implements OnInit {
   countryCode: string;
   number: string;
   code: string;
+  password: string;
+
+  formControl = new FormControl('', [
+    Validators.required,
+  ]);
 
   constructor(private apiService: AccountService, private router: Router, private snackBar: MatSnackBar) { }
 
   ngOnInit() {
   }
 
-  onMobileChanged(v) {
+  onPhoneCodeChanged(v) {
     this.countryCode = v.countryCode;
-    this.number = v.number;
+    this.number = v.phoneNumber;
+    this.code = v.code;
   }
 
-  onCodeChanged(v) {
-    this.code = v;
-  }
 
   onSignup() {
     if(this.number.length!=11){
       return;
-    }
-    if(this.code.length==0){
+    } else if(this.code.length==0){
+      return;
+    } else if(this.password.length==0){
       return;
     }
-    console.debug(this.countryCode, this.number, this.code);
-    this.apiService.Signup(this.countryCode, this.number, this.code, '123456').subscribe((data)=>this.onSuccess(data), (resp)=>this.onError(resp));
+    this.apiService.Signup(this.countryCode, this.number, this.code, this.password).subscribe((data)=>this.onSuccess(data), (resp)=>this.onError(resp));
   }
 
   onSuccess(data){

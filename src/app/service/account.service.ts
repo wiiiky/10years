@@ -11,18 +11,18 @@ export class AccountService {
     return this.http.get(APIConfig.HOST + APIConfig.PATH_ACCOUNT_INFO);
   }
 
-  Login(mobile, password) {
+  Login(phoneNumber, password) {
     let data = {
-      mobile: mobile,
+      phone_number: phoneNumber,
       password: password,
     };
     return this.http.put(APIConfig.HOST+APIConfig.PATH_LOGIN, data);
   }
 
-  Signup(countryCode, mobile, code, password) {
+  Signup(countryCode, phoneNumber, code, password) {
     let data = {
       country_code: countryCode,
-      mobile: mobile,
+      phone_number: phoneNumber,
       code: code,
       password: password,
     };

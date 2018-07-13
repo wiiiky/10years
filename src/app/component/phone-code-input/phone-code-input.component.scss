@@ -1,0 +1,31 @@
+:host{
+  width: 100%;
+  display: block;
+  mat-form-field {
+    width: 100%;
+
+    a.send-code {
+      cursor: pointer;
+      user-select: none;
+      color: #2b60a2;
+    }
+  }
+
+  div.phone-container{
+    display: flex;
+    font-size: 16px;
+    mat-form-field{
+      flex: 1;
+    }
+    div.divider {
+      width: 0.6px;
+      height: auto;
+      background-color: grey;
+      display: block;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
+}

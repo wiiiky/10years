@@ -85,6 +85,7 @@ import { SearchQuestionLoaderComponent } from 'app/component/search-question-loa
 import { AssembleButtonComponent } from 'app/component/assemble-button/assemble-button.component';
 import { ContentViewerComponent } from 'app/component/content-viewer/content-viewer.component';
 import { QuestionHeaderComponent } from 'app/component/question-header/question-header.component';
+import { PhoneCodeInputComponent } from 'app/component/phone-code-input/phone-code-input.component';
 /* PAGE */
 import { TopicPageComponent } from 'app/page/topic/topic-page.component';
 import { ProfilePageComponent } from 'app/page/profile/profile-page.component';
@@ -102,6 +103,7 @@ import { QuestionService } from 'app/service/question.service';
 import { FileService } from 'app/service/file.service';
 import { UserService } from 'app/service/user.service';
 import { HttpService } from 'app/service/http.service';
+import { SMSService } from 'app/service/sms.service';
 
 @NgModule({
   declarations: [
@@ -139,6 +141,7 @@ import { HttpService } from 'app/service/http.service';
     AssembleButtonComponent,
     ContentViewerComponent,
     QuestionHeaderComponent,
+    PhoneCodeInputComponent,
   ],
   imports: [
     HttpModule,
@@ -190,6 +193,7 @@ import { HttpService } from 'app/service/http.service';
     AccountService,
     FileService,
     UserService,
+    SMSService,
     {
       provide: HttpService,
       useFactory: (backend: XHRBackend, options: RequestOptions, router: Router) => {

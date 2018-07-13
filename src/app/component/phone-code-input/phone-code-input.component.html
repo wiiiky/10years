@@ -1,0 +1,17 @@
+<div class="phone-container">
+  <app-country-code-select (onSelectValue)='onCountryCodeChanged($event)'></app-country-code-select>
+  <div class="divider"></div>
+  <mat-form-field class="phone-number-input">
+    <input matInput type="tel" placeholder="手机号" [(ngModel)]="info.phoneNumber" (ngModelChange)="onNumberChanged($event)" [formControl]="formControl">
+    <mat-error *ngIf="formControl.hasError('required')">
+      请输入手机号
+    </mat-error>
+  </mat-form-field>
+</div>
+<mat-form-field>
+  <input matInput type="text" placeholder="短信验证码" [(ngModel)]="info.code" (ngModelChange)="onCodeChanged($event)" [formControl]="formControl">
+  <mat-error *ngIf="formControl.hasError('required')">
+    请输入六位短信验证码
+  </mat-error>
+  <a class="send-code" matSuffix (click)="onSendCode($event)">{{codeMessage}}</a>
+</mat-form-field>
