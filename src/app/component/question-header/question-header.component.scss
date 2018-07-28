@@ -30,8 +30,13 @@
       div.action-container {
         margin-top: 20px;
 
-        button.answer-question, button.follow-question {
+        button.answer-question, button.follow-question, button.unfollow-question {
           width: 96px;
+        }
+
+        button.unfollow-question {
+          color: white;
+          background: gray;
         }
 
         button.answer-question{
